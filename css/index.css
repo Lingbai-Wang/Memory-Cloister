@@ -1,0 +1,250 @@
+html,body{
+	font: 0.75rem/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+	margin: 0;
+	padding: 0;
+}
+body{
+	position: absolute;
+	top: 0px;
+}
+a{
+	text-decoration: none;
+	color: #555;
+	cursor: auto;
+}
+header{
+	width: 100%;
+	height: 46px;
+	background: #FFF;
+	color: #555;
+	position: fixed;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+	z-index: 100;
+	border: 1px red solid;
+}
+.header_content{
+	max-width: 1170px; 
+	height: 100%;
+	position: relative;
+	margin: 0 auto;
+
+}
+.header_content .logo_href{
+	display: inline-block;
+	height: 100%;
+	border:1px red solid;
+	float: left;
+}
+.header_content .logo_href .logo{
+	display: inline-block;
+	width: 97px;
+	height: 60px;
+	background: url(../imgs/logo.png) no-repeat;
+}
+.header_nav{
+	height: 100%;
+	position: relative;
+	float: left;
+}
+.header_login{
+	height: 100%;
+	position: relative;
+	float: right;
+	line-height: 46px;
+	padding: 0 16px;
+}
+.header_login a{
+	display: inline-block;
+	height: 100%;
+}
+.header_nav{
+	margin: 0;
+	padding: 0;
+}
+.header_nav li{
+	display: inline-block;
+	float: left;
+	list-style: none;
+	height: 100%;
+}
+.header_nav li a{
+	display: block;
+	height: 100%;
+	padding: 0 20px;
+	line-height: 46px;
+}
+.header_nav li dl{
+	display: none;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	margin:0;
+	background-color: #FFF;
+	box-shadow: 2px 2px 1px rgba(0,0,0,0.3);
+}
+.header_nav li dl dt{
+	height: 40px;
+}
+.header_nav li dl dt a{
+	line-height: 40px;
+}
+.main_banner{
+	margin-top: 46px;
+	width: 100%;
+	min-width: 970px;
+	height: 200px;
+	overflow: hidden;
+}
+.banner_content{
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+.banner_background{
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+.banner_background img{
+	width: 100%;
+}
+.banner_text{
+	position: absolute;
+	top: 0px;
+	padding: 71px 0px;
+	width: 100%;
+	height: 58px;
+}
+.banner_text h2{
+	background: url(../imgs/banner_title.png) no-repeat center;
+	margin: 0px;
+	padding: 0px;
+	height: 58px;
+}
+.main_warp{
+	width: 1170px;
+	margin: 0 auto;
+	margin-top: 50px;
+	margin-bottom: 30px;
+	height: 1000px;
+	border: 1px orange solid;
+}
+.main_item{
+	height: 320px;
+}
+.item_focus{
+	width: 900px;
+	height: 320px;
+	float: left;
+}
+
+
+
+/*轮播begin*/
+.item_focus .container{
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    position:relative;
+}
+.item_focus .container .list{
+    width:6300px;
+    height:100%;
+    position: absolute;
+}
+.item_focus .container .list img{
+    float:left;
+}
+.item_focus .container .arrow{
+    position:absolute;
+    width:40px;
+    height:40px;
+    top:43.75%;
+    line-height:40px;
+    text-decoration: none;
+    display:none;
+    color:#FFF;
+}
+.item_focus .container .buttons{
+    position:absolute;
+    bottom:10px;
+    right:30px;
+    height:10px;
+    width:100px;
+    display: none;
+}
+.item_focus .container .buttons span{
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background:rgba(255,255,255,1);
+    float:left;
+    margin-right:12.5px;
+}
+.item_focus .container .buttons span:last-child{
+    margin-right:0px;
+}
+.item_focus .container .buttons .on{
+    background:orange;
+}
+#prev{
+    left:0px;
+    background: url(../imgs/prev.png) no-repeat;
+}
+#next{
+    right:0px;
+    background: url(../imgs/next.png) no-repeat;
+}
+.item_focus .container:hover .arrow{
+    display:block;
+}
+.item_focus .container:hover .buttons{
+    display:block;
+}
+/*轮播end*/
+
+
+
+.item_client{
+	width: 256px;
+	height: 320px;
+	float: right;
+}
+.client_info{
+	height: 230px;
+	background: url(../imgs/256x230.jpg) no-repeat;
+}
+.client_title{
+	height: 18px;
+	background: url(../imgs/256x18.jpg) no-repeat;
+	margin-top: 10px;
+	margin-bottom: 14px;
+}
+.client_app{
+	height: 48px;
+}
+.client_app a{
+	display: inline-block;
+	width: 48px;
+	height: 48px;
+	float: left;
+	margin-right: 10px;
+	border-radius: 5px;
+}
+.client_app a:nth-child(1){
+	background: url(../imgs/android.png) no-repeat;
+}
+.client_app a:nth-child(2){
+	background: url(../imgs/ios.png) no-repeat;
+}
+.client_app a:nth-child(3) , .client_app a:nth-child(4){
+	width: 44px;
+	height: 44px;
+	border: 2px dashed #C1C1C1;
+	line-height: 44px;
+	text-align: center;
+	color: #aaa;
+}
+.client_app a:nth-child(4){
+	margin-right: 0px;
+}
