@@ -1,11 +1,11 @@
 html,body{
-	font: 0.75rem/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
 	margin: 0;
 	padding: 0;
 }
 body{
 	position: absolute;
 	top: 0px;
+	font: 0.75rem/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
 }
 a{
 	text-decoration: none;
@@ -125,8 +125,7 @@ header{
 	width: 1170px;
 	margin: 0 auto;
 	margin-top: 50px;
-	margin-bottom: 30px;
-	height: 1000px;
+	margin-bottom: 60px;
 	border: 1px orange solid;
 }
 .main_item{
@@ -247,4 +246,7 @@ header{
 }
 .client_app a:nth-child(4){
 	margin-right: 0px;
+}
+iframe{
+	display: block;
 }
