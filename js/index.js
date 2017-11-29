@@ -4,9 +4,9 @@ $(function(){
 
 	/*导航begin*/
 	$(".header_nav li").hover(function(){
-		$(this).find("dl").stop().slideDown(100);
+		$(this).find("dl").stop().slideDown(233);
 	},function(){
-		$(this).find("dl").stop().slideUp(100);
+		$(this).find("dl").stop().slideUp(233);
 	});
 	$(".header_nav li dl dt").hover(function(){
 		$(this).css("background-color","#7b8ec8");

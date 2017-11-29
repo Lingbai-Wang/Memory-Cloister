@@ -79,17 +79,17 @@ header{
 .header_nav li dl{
 	display: none;
 	position: absolute;
-	padding-top: 8px;
-	padding-bottom: 8px;
+	padding-top: 6px;
+	padding-bottom: 6px;
 	margin:0;
 	background-color: #FFF;
 	box-shadow: 2px 2px 1px rgba(0,0,0,0.3);
 }
 .header_nav li dl dt{
-	height: 40px;
+	height: 33px;
 }
 .header_nav li dl dt a{
-	line-height: 40px;
+	line-height: 33px;
 	white-space: nowrap;
 }
 .main_banner{
@@ -131,7 +131,7 @@ header{
 	margin: 0 auto;
 	margin-top: 50px;
 	margin-bottom: 60px;
-	border: 1px orange solid;
+	/*border: 1px green solid;*/
 }
 .main_item{
 	height: 320px;
