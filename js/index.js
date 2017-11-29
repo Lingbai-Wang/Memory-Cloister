@@ -10,8 +10,10 @@ $(function(){
 	});
 	$(".header_nav li dl dt").hover(function(){
 		$(this).css("background-color","#7b8ec8");
+        $(this).find("a").css("color","#FFF");
 	},function(){
 		$(this).css("background-color","#FFF");
+        $(this).find("a").css("color","#000");
 	});
 	/*导航end*/
 
