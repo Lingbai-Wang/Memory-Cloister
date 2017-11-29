@@ -2,10 +2,12 @@ html,body{
 	margin: 0;
 	padding: 0;
 }
+html{
+	font: 0.75rem/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+}
 body{
 	position: absolute;
 	top: 0px;
-	font: 0.75rem/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
 }
 a{
 	text-decoration: none;
@@ -62,6 +64,7 @@ header{
 	padding: 0;
 }
 .header_nav li{
+	position: relative;
 	display: inline-block;
 	float: left;
 	list-style: none;
@@ -75,6 +78,7 @@ header{
 }
 .header_nav li dl{
 	display: none;
+	position: absolute;
 	padding-top: 8px;
 	padding-bottom: 8px;
 	margin:0;
@@ -86,6 +90,7 @@ header{
 }
 .header_nav li dl dt a{
 	line-height: 40px;
+	white-space: nowrap;
 }
 .main_banner{
 	margin-top: 46px;
