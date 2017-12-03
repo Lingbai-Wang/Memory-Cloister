@@ -2,12 +2,10 @@ html,body{
 	margin: 0;
 	padding: 0;
 }
-html{
-	font: 0.75rem/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
-}
 body{
 	position: absolute;
 	top: 0px;
+	font: 0.75rem/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
 }
 a{
 	text-decoration: none;

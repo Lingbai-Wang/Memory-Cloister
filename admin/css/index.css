@@ -1,0 +1,123 @@
+html,body{
+	height: 100%;
+}
+body{
+	font: 0.75rem/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+	background-color: rgba(143,181,158,.8);
+	margin: 0;
+}
+#layout{
+	width: 1170px;
+	height: 100%;
+	background-color: rgba(240,243,244,1);
+	margin: 0 auto;
+}
+header{
+	height: 50px;
+	background-color: #7266ba;
+}
+header #home{
+	float: left;
+	display: inline-block;
+	width: 60px;
+	height: 100%;
+	border: 1px orange solid;
+}
+#home a{
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+#home a i{
+	font-size: 1.25rem;
+	color: #FFF;
+	line-height: 50px;
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+}
+header #header_container{
+	border: 1px red solid;
+	height: 100%;
+	margin-left: 60px;
+}
+#header_container #header_btn{
+	float: left;
+	height: 100%;
+	width: 88px;
+	margin-left: 15px;
+	border: 1px #FFF solid;
+}
+#header_btn #header_aside-btn{
+	display: inline-block;
+	width: 44px;
+	height: 100%;
+	float: left;
+}
+#header_btn #header_user-btn{
+	display: inline-block;
+	width: 44px;
+	height: 100%;
+	float: left;
+}
+#header_aside-btn i{
+	font-size: 0.87rem;
+	color: #FFF;
+	line-height: 50px;
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+}
+#header_user-btn i{
+	font-size: 0.87rem;
+	color: #FFF;
+	line-height: 50px;
+	text-align: center;
+	display: inline-block;
+	width: 100%;
+}
+#header_container #header_search{
+	float: left;
+	height: 100%;
+	width: 170px;
+	margin-left: 15px;
+	border: 1px #FFF solid;
+}
+#header_search form{
+	height: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#header_search form #header_search-content{
+	width: 137px;
+	height: 30px;
+	padding: 0px;
+	border: 0px;
+	outline: none;
+	background-color: rgba(240,243,244,1);
+	float: left;
+	border-top-left-radius:500px;
+	border-bottom-left-radius:500px;
+	padding: 5px 15px;
+	font-size: 0.75rem;
+	color: #555;
+}
+#header_search form #header_search-btn{
+	width: 33px;
+	height: 30px;
+	padding: 0px;
+	border: 0px;
+	background-color: rgba(240,243,244,1);
+	border-top-right-radius:500px;
+	border-bottom-right-radius:500px;
+}
+#header_search-btn i{
+	font-size: 0.75rem;
+	color: #58666e;
+}
+#header_container #header_userinfo{
+	float: right;
+	height: 100%;
+	width: 160px;
+	border: 1px #FFF solid;
+}
