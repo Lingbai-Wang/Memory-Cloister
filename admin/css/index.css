@@ -231,6 +231,10 @@ aside #aside_container{
 	top: 50px;
 	bottom: 0;
 	overflow: auto;
+	-ms-overflow-style: none;
+}
+#aside_container::-webkit-scrollbar{
+	display: none;
 }
 #aside_container #aside_userinfo{
 	text-align: center;
@@ -308,7 +312,8 @@ aside #aside_container{
 #aside_nav ul li a .aside_nav-arrow i{
 	font-size: 0.875rem;
 	color: #8b8e99;
-	width: 10px;
+	width: 11px;
+	text-align: center;
 }
 #aside_nav ul li a .aside_nav-arrow i:nth-child(2){
 	display: none;
