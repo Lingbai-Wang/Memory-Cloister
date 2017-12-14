@@ -229,11 +229,16 @@ aside #aside_container{
 	position: fixed;
 	top: 50px;
 	bottom: 0;
-	overflow: auto;
-	-ms-overflow-style: none;
+	overflow: hidden;
 }
-#aside_container::-webkit-scrollbar{
-	display: none;
+#aside_container #aside_extend{
+	width: 400px;
+	height: 100%;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+#aside_extend>*{
+	width: 200px;
 }
 #aside_container #aside_userinfo{
 	text-align: center;
