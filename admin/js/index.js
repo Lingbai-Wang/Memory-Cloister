@@ -1,17 +1,14 @@
 $(document).ready(function(){
 
-	var i=0;
 	$("#header_aside-btn").click(function(){
-		if (i==0) {
-			$("#home").css("width","200px");
-			$("#home").find("span").css("display","inline-block");
-			$("#header_container").css("margin-left","200px");
-			i=1;
-		}else{
+		if ($("#home").css("width")=="200px") {
 			$("#home").css("width","60px");
 			$("#home").find("span").css("display","none");
 			$("#header_container").css("margin-left","60px");
-			i=0;
+		}else{			
+			$("#home").css("width","200px");
+			$("#home").find("span").css("display","inline-block");
+			$("#header_container").css("margin-left","200px");
 		}
 	});
 
