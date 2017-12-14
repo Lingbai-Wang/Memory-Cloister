@@ -328,3 +328,7 @@ aside #aside_container{
 #aside_nav ul li .aside_nav-index1 li a span{
 	font-size: 0.8rem;
 }
+#aside_nav ul li .aside_nav-index2{
+	display: none;
+	background-color: #333333;
+}
