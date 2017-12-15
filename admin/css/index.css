@@ -24,7 +24,7 @@ header{
 header #home{
 	float: left;
 	display: inline-block;
-	width: 200px;
+	width: 60px;
 	height: 100%;
 	border: 1px orange solid;
 }
@@ -43,11 +43,12 @@ header #home{
 #home a span{
 	font-size: 1rem;
 	color: #FFF;
+	display: none;
 }
 header #header_container{
 	border: 1px red solid;
 	height: 100%;
-	margin-left: 200px;
+	margin-left: 60px;
 }
 #header_container #header_btn{
 	float: left;
