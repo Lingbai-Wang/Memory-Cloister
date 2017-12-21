@@ -229,11 +229,16 @@ aside #aside_container{
 	position: fixed;
 	top: 50px;
 	bottom: 0;
-	overflow: auto;
-	-ms-overflow-style: none;
+	overflow: hidden;
 }
-#aside_container::-webkit-scrollbar{
-	display: none;
+#aside_container #aside_wrap{
+	overflow-x: hidden;
+	overflow-y: scroll;
+	width: 220px;
+	height: 100%;
+}
+#aside_wrap>*{
+	width: 200px;
 }
 #aside_container #aside_userinfo{
 	text-align: center;
@@ -317,17 +322,17 @@ aside #aside_container{
 #aside_nav ul li a .aside_nav-arrow i:nth-child(2){
 	display: none;
 }
-#aside_nav ul li .aside_nav-index1{
+#aside_nav .aside_nav-index1{
 	display: none;
 	background-color: #2e3344;
 }
-#aside_nav ul li .aside_nav-index1 li a{
+#aside_nav .aside_nav-index1 li a{
 	padding-left: 56px;
 }
-#aside_nav ul li .aside_nav-index1 li a span{
+#aside_nav .aside_nav-index1 li a span{
 	font-size: 0.8rem;
 }
-#aside_nav ul li .aside_nav-index2{
+#aside_nav .aside_nav-index2{
 	display: none;
 	background-color: #333333;
 }
