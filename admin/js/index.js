@@ -86,8 +86,7 @@ $(document).ready(function(){
 			});
 			if(indexHeight>(h-50)){
 				index.height(h-50);
-			}else{
-				index.height(indexHeight);
+				index.width(160-index.width()+160);
 			}
 			var r1=$(this).get(0).getBoundingClientRect();
 			index.css("left","100%");
@@ -130,8 +129,7 @@ $(document).ready(function(){
 					});
 					if(indexHeight>(h-50)){
 						index.height(h-50);
-					}else{
-						index.height(indexHeight);
+						index.width(160-index.width()+160);
 					}
 					var r1=temp2.get(0).getBoundingClientRect();
 					index.css("left","calc(100% + 160px)");
@@ -162,8 +160,7 @@ $(document).ready(function(){
 					});
 					if(indexHeight>(h-50)){
 						index.height(h-50);
-					}else{
-						index.height(indexHeight);
+						index.width(160-index.width()+160);
 					}
 					var r1=$(this).get(0).getBoundingClientRect();
 					index.css("left","calc(100% + 160px)");
