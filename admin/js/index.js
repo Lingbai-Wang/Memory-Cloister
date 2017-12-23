@@ -114,7 +114,6 @@ $(document).ready(function(){
 				var r=$(this).get(0).getBoundingClientRect();
 				var temp1=Math.floor((e.pageY-r.top)/39);
 				var temp2=$(this).children().eq(temp1).children("a");
-				console.log(temp1);
 
 				$("aside>.aside_nav-index2").remove();
 				if(temp2.next().length>0){

@@ -380,3 +380,6 @@ aside>.aside_nav-index2 li a{
 aside>.aside_nav-index2 li a span{
 	font-size: 0.8rem;
 }
+aside>.aside_nav-index2 .aside_nav-index3{
+	display: none;
+}
