@@ -224,7 +224,6 @@ aside{
 	z-index: 99;
 }
 aside #aside_container{
-	border: 1px red solid;
 	width: 200px;
 	position: fixed;
 	top: 50px;
@@ -335,4 +334,49 @@ aside #aside_container{
 #aside_nav .aside_nav-index2{
 	display: none;
 	background-color: #333333;
+}
+aside>.aside_nav-index1{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 160px;
+	background-color: #2e3344;
+	position: absolute;
+	overflow: auto;
+}
+aside>.aside_nav-index1 li{
+	display: block;
+}
+aside>.aside_nav-index1 li a{
+	text-decoration: none;
+	color: #b4b6bd;
+	display: block;
+	padding: 10px 20px;
+}
+aside>.aside_nav-index1 li a span{
+	font-size: 0.8rem;
+}
+aside>.aside_nav-index1 .aside_nav-index2{
+	display: none;
+}
+aside>.aside_nav-index2{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 160px;
+	background-color: #2e3344;
+	position: absolute;
+	overflow: auto;
+}
+aside>.aside_nav-index2 li{
+	display: block;
+}
+aside>.aside_nav-index2 li a{
+	text-decoration: none;
+	color: #b4b6bd;
+	display: block;
+	padding: 10px 20px;
+}
+aside>.aside_nav-index2 li a span{
+	font-size: 0.8rem;
 }
