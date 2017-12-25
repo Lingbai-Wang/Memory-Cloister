@@ -5,20 +5,72 @@ $(document).ready(function(){
 			$("#home").css("width","60px");
 			$("#home").find("span").css("display","none");
 			$("#header_container").css("margin-left","60px");
+			$("aside").css("width","60px");
+			$("#aside_container").css("width","60px");
+			$("#aside_wrap").css("width","80px");
+			$("#aside_wrap>*").css("width","60px");
+			$("#aside_userinfo>a:eq(0)").css({
+				"width":"30px",
+				"height":"30px",
+				"margin-bottom":"15px",
+			});
+			$("#aside_userinfo>a:eq(1)").css("display","none");
+			$("#aside_wrap>.aside_line").css("display","none");
+			$("#aside_nav>ul>.aside_nav-title").css("display","none");
+			$("#aside_nav>ul>li").css("height","50px");
+			$("#aside_nav>ul>li>a").css({
+				"padding":"0",
+				"height":"100%",
+			});
+			$("#aside_nav>ul>li>a>i").css({
+				"width":"100%",
+				"height":"100%",
+				"font-size":"1rem",
+				"text-align":"center",
+				"line-height":"50px",
+			});
+			$("#aside_nav>ul>li>a>span").css("display","none");
 		}else{			
-			$("#home").css("width","200px");
-			$("#home").find("span").css("display","inline-block");
-			$("#header_container").css("margin-left","200px");
+			$("#home").css("width","");
+			$("#home").find("span").css("display","");
+			$("#header_container").css("margin-left","");
+			$("aside").css("width","");
+			$("#aside_container").css("width","");
+			$("#aside_wrap").css("width","");
+			$("#aside_wrap>*").css("width","");
+			$("#aside_userinfo>a:eq(0)").css({
+				"width":"",
+				"height":"",
+				"margin-bottom":"",
+			});
+			$("#aside_userinfo>a:eq(1)").css("display","");
+			$("#aside_wrap>.aside_line").css("display","");
+			$("#aside_nav>ul>.aside_nav-title").css("display","");
+			$("#aside_nav>ul>li").css("height","");
+			$("#aside_nav>ul>li>a").css({
+				"padding":"",
+				"height":"",
+			});
+			$("#aside_nav>ul>li>a>i").css({
+				"width":"",
+				"height":"",
+				"font-size":"",
+				"text-align":"",
+				"line-height":"",
+			});
+			$("#aside_nav>ul>li>a>span").css("display","");
 		}
 	});
 
 	$("#header_user-btn").click(function(){
 		if($("#aside_userinfo").css("display")=="block"){
 			$("#aside_userinfo").css("display","none");
-			$(".aside_line:eq(0)").css("display","none");
+			$("#aside_wrap>.aside_line").css("display","none");
 		}else{
-			$("#aside_userinfo").css("display","block");
-			$(".aside_line:eq(0)").css("display","block");
+			$("#aside_userinfo").css("display","");
+			if($("#home").css("width")=="200px"){
+				$("#aside_wrap>.aside_line").css("display","");
+			}
 		}
 	});
 	
