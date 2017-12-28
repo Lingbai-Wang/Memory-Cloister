@@ -73,7 +73,67 @@ $(document).ready(function(){
 			}
 		}
 	});
-	
+
+	$("#panel_btn").click(function(){
+		if($("#panel").css("right")=="-242px"){
+			$("#panel").css("right","0px");
+		}else{
+			$("#panel").css("right","");
+		}
+	});
+
+	$("#panel_btn-0").click(function(){
+		var panelBtnStatus=new Array(true,true);
+		$(".panel_toggle").each(function(i){
+			if(($(">i:eq(0)",this).css("display")=="inline-block"&&panelBtnStatus[i]==true)
+				||($(">i:eq(0)",this).css("display")=="none"&&panelBtnStatus[i]==false)){
+				$(this).triggerHandler("click");
+			}
+		});
+	});
+
+	$("#panel_btn-1").click(function(){
+		if($(">i:eq(0)",this).css("display")=="inline-block"){
+			$(">i:eq(0)",this).css("display","none");
+			$(">i:eq(1)",this).css("display","inline-block");
+			$("header").css("position","");
+			$("#home").css({
+				"position":"",
+				"z-index":"",
+				"background-color":"",
+				"height":"",
+			});
+			$("#content").css("padding-top","");
+		}else{
+			$(">i:eq(0)",this).css("display","inline-block");
+			$(">i:eq(1)",this).css("display","none");
+			$("header").css("position","static");
+			$("#home").css({
+				"position":"fixed",
+				"z-index":"100",
+				"background-color":"#7266ba",
+				"height":"50px",
+			});
+			$("#content").css("padding-top","0");
+		}
+	});
+
+	$("#panel_btn-2").click(function(){
+		if($(">i:eq(0)",this).css("display")=="inline-block"){
+			$(">i:eq(0)",this).css("display","none");
+			$(">i:eq(1)",this).css("display","inline-block");
+			$("#layout").css("width","");
+			$("header").css("width","");
+		}else{
+			$(">i:eq(0)",this).css("display","inline-block");
+			$(">i:eq(1)",this).css("display","none");
+			$("#layout").css("width","100%");
+			$("header").css("width","100%");
+		}
+	});
+
+	$("#panel_btn-0").triggerHandler("click");
+
 	/*左侧导航-切换-点击-开始*/
 	// $("#aside_nav ul li a").click(function(){
 	// 	var temp=$(this);

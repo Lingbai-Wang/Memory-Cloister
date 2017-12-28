@@ -9,9 +9,10 @@ body{
 }
 #layout{
 	width: 1170px;
-	height: 100%;
+	min-height: 100%;
 	background-color: rgba(240,243,244,1);
 	margin: 0 auto;
+	box-shadow: 0 0 30px rgba(0,0,0,.3);
 }
 header{
 	height: 50px;
@@ -26,7 +27,6 @@ header #home{
 	display: inline-block;
 	width: 200px;
 	height: 100%;
-	border: 1px orange solid;
 }
 #home a{
 	display: inline-block;
@@ -45,7 +45,6 @@ header #home{
 	color: #FFF;
 }
 header #header_container{
-	border: 1px red solid;
 	height: 100%;
 	margin-left: 200px;
 }
@@ -54,7 +53,6 @@ header #header_container{
 	height: 100%;
 	width: 88px;
 	margin-left: 15px;
-	border: 1px #FFF solid;
 }
 #header_btn #header_aside-btn{
 	display: inline-block;
@@ -89,7 +87,6 @@ header #header_container{
 	height: 100%;
 	width: 170px;
 	margin-left: 15px;
-	border: 1px #FFF solid;
 }
 #header_search form{
 	height: 30px;
@@ -130,13 +127,11 @@ header #header_container{
 	float: right;
 	height: 100%;
 	width: 224px;
-	border: 1px #FFF solid;
 }
 #header_userinfo #header_userinfo-set{
 	width: 46px;
 	height: 100%;
 	float: left;
-	border: 1px #FFF solid;
 }
 #header_userinfo-set a{
 	display: inline-block;
@@ -154,7 +149,6 @@ header #header_container{
 	width: 46px;
 	height: 100%;
 	float: left;
-	border: 1px #FFF solid;
 }
 #header_userinfo-email a{
 	display: inline-block;
@@ -172,7 +166,6 @@ header #header_container{
 	width: 46px;
 	height: 100%;
 	float: left;
-	border: 1px #FFF solid;
 }
 #header_userinfo-message a{
 	display: inline-block;
@@ -190,7 +183,6 @@ header #header_container{
 	width: 76px;
 	height: 100%;
 	float: right;
-	border: 1px #FFF solid;
 }
 #header_userinfo-login a{
 	display: inline-block;
@@ -382,4 +374,100 @@ aside>.aside_nav-index2 li a span{
 }
 aside>.aside_nav-index2 .aside_nav-index3{
 	display: none;
+}
+#content{
+	margin-left: 200px;
+	padding-top: 50px;
+	height: 1000px;
+}
+#panel{
+	position: fixed;
+	top: 120px;
+	right: -242px;
+	width: 240px;
+	background-color: #FFF;
+	border: 1px #dee5e7 solid;
+	border-radius: 2px;
+	box-shadow: 0 1px 1px rgba(0,0,0,.05);
+}
+#panel #panel_btn{
+	position: absolute;
+	top: -1px;
+	left: -42px;
+	width: 42px;
+	height: 42px;
+	border: 1px #dee5e7 solid;
+	border-right-width: 0;
+	border-radius: 2px;
+	box-shadow: none;
+	outline: none;
+	padding: 0;
+	background-color: #f6f8f8;
+	font-size: 0.875rem;
+	color: #58666e;
+}
+#panel #panel_header{
+	height: 40px;
+	background-color: #f6f8f8;
+	border-radius: 2px 2px 0 0;
+	border-bottom: 1px #edf1f2 solid;
+	font-size: 0.875rem;
+	color: #333;
+}
+#panel_header span{
+	line-height: 40px;
+	padding-left: 15px;
+}
+#panel_header #panel_btn-0{
+	float: right;
+	padding: 0;
+	border: 0;
+	outline: none;
+	width: 60px;
+	height: 22px;
+	margin-top: 9px;
+	margin-right: 15px;
+	border-radius: 50px;
+	background-color: #7CCD7C;
+	color: #FFF;
+	font-size: 0.75rem;
+}
+#panel #panel_body{
+	padding: 15px;
+	height: 140px;
+}
+#panel_body div{
+	height: 30px;
+}
+#panel_body div span{
+	display: inline-block;
+	line-height: 30px;
+	font-size: 0.875rem;
+	color: #58666e;
+}
+#panel_body div .panel_toggle{
+	float: right;
+	height: 30px;
+}
+#panel_body div .panel_toggle i{
+	font-size: 30px;
+}
+#panel_body div .panel_toggle i:nth-child(1){
+	color: #dcf2f8;
+}
+#panel_body div .panel_toggle i:nth-child(2){
+	color: #23b7e5;
+}
+#panel_body div #panel_btn-1 i:nth-child(1){
+	display: none;
+}
+#panel_body div #panel_btn-2 i:nth-child(1){
+	display: none;
+}
+#panel #theme_container{
+	padding: 15px;
+	background-color: #f6f8f8;
+	border-top: 1px #edf1f2 solid;
+	border-radius: 0 0 2px 2px;
+	height: 275px;
 }
