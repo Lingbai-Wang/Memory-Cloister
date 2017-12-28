@@ -434,7 +434,6 @@ aside>.aside_nav-index2 .aside_nav-index3{
 }
 #panel #panel_body{
 	padding: 15px;
-	height: 140px;
 }
 #panel_body div{
 	height: 30px;
@@ -457,11 +456,6 @@ aside>.aside_nav-index2 .aside_nav-index3{
 }
 #panel_body div .panel_toggle i:nth-child(2){
 	color: #23b7e5;
-}
-#panel_body div #panel_btn-1 i:nth-child(1){
-	display: none;
-}
-#panel_body div #panel_btn-2 i:nth-child(1){
 	display: none;
 }
 #panel #theme_container{
