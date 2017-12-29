@@ -380,6 +380,20 @@ aside>.aside_nav-index2 .aside_nav-index3{
 	padding-top: 50px;
 	height: 1000px;
 }
+footer{
+	margin-left: 200px;
+	height: 40px;
+	background-color: #edf1f2;
+	border-top: 1px #dee5e7 solid;
+}
+footer div{
+	height: 100%;
+}
+footer div span{
+	line-height: 40px;
+	margin-left: 30px;
+	color: #58666e;
+}
 #panel{
 	position: fixed;
 	top: 120px;

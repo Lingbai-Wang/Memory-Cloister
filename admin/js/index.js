@@ -30,6 +30,8 @@ $(document).ready(function(){
 				"line-height":"50px",
 			});
 			$("#aside_nav>ul>li>a>span").css("display","none");
+			$("#content").css("margin-left","60px");
+			$("footer").css("margin-left","60px");
 		}else{			
 			$("#home").css("width","");
 			$("#home").find("span").css("display","");
@@ -59,6 +61,8 @@ $(document).ready(function(){
 				"line-height":"",
 			});
 			$("#aside_nav>ul>li>a>span").css("display","");
+			$("#content").css("margin-left","");
+			$("footer").css("margin-left","");
 		}
 	});
 
