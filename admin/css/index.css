@@ -378,7 +378,125 @@ aside>.aside_nav-index2 .aside_nav-index3{
 #content{
 	margin-left: 200px;
 	padding-top: 50px;
-	height: 1000px;
+	height: 1300px;
+}
+#content #content_container{
+	width: calc(100% - 241px);
+	height: 100%;
+	float: left;
+}
+#content #content_aside{
+	width: 240px;
+	height: 100%;
+	float: right;
+	border-left: 1px #dee5e7 solid;
+	background-color: #FFF;
+}
+#content_aside-tabs #content_aside-tabs-top{
+	height: 58px;
+}
+#content_aside-tabs-top ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	height: 100%;
+}
+#content_aside-tabs-top ul li{
+	display: block;
+	width: 80px;
+	height: 100%;
+	float: left;
+}
+#content_aside-tabs-top ul li a{
+	display: inline-block;
+	width: calc(100% - 2px);
+	height: calc(100% - 2px);
+	border: 1px #FFF solid;
+	border-bottom: 1px #dee5e7 solid;
+	text-align: center;
+}
+#content_aside-tabs-top ul li a i{
+	font-size: 1rem;
+	line-height: 56px;
+	color: #98a6ad;
+}
+#content_aside-tabs-bottom>div{
+	padding: 20px;
+	display: none;
+}
+#content_aside-tabs-bottom>div>span{
+	font-size: 1rem;
+	color: #58666e;
+	display: block;
+	margin-bottom: 10px;
+}
+#content_aside-tabs-bottom>div>ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+#content_aside-tabs-bottom>div>ul>li{
+	display: block;
+	padding: 10px 0px;
+}
+#content_aside-tabs-bottom>div>ul>li>a{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	overflow: hidden;
+	border-radius: 50%;
+	float: left;
+	margin-right: 16px;
+}
+#content_aside-tabs-bottom>div>ul>li>a>img{
+	width: 100%;
+}
+#content_aside-tabs-bottom>div>ul>li>div{
+	display: inline-block;
+	width: 144px;
+	min-height: 40px;
+}
+#content_aside-tabs-bottom .content_aside-tabs-articleTitle{
+	display: block;
+	text-decoration: none;
+}
+#content_aside-tabs-bottom .content_aside-tabs-articleTitle span{
+	font-size: 0.875rem;
+	color: #58666e;
+	display: block;
+}
+#content_aside-tabs-bottom .content_aside-tabs-articleInfo>span{
+	display: inline-block;
+	color: #98a6ad;
+}
+#content_aside-tabs-bottom .content_aside-tabs-viewNum{
+	margin-left: 10px;
+}
+#content_aside-tabs-bottom .content_aside-tabs-commentAuthor{
+	display: block;
+	text-decoration: none;
+}
+#content_aside-tabs-bottom .content_aside-tabs-commentAuthor span{
+	font-size: 0.875rem;
+	color: #58666e;
+	display: block;
+}
+#content_aside-tabs-bottom .content_aside-tabs-commentText{
+	display: block;
+	text-decoration: none;
+}
+#content_aside-tabs-bottom .content_aside-tabs-commentText span{
+	font-size: 0.8125rem;
+	color: #98a6ad;
+	display: block;
+}
+#content_aside #content_aside-category{
+	height: 300px;
+	border: 1px green solid;
+}
+#content_aside #content_aside-tagCloud{
+	height: 260px;
+	border: 1px green solid;
 }
 footer{
 	margin-left: 200px;
