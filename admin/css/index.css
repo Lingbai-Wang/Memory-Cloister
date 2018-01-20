@@ -495,8 +495,22 @@ aside>.aside_nav-index2 .aside_nav-index3{
 	border: 1px green solid;
 }
 #content_aside #content_aside-tagCloud{
-	height: 260px;
-	border: 1px green solid;
+	padding: 20px;
+}
+#content_aside-tagCloud span{
+	font-size: 1rem;
+	color: #58666e;
+	display: block;
+	margin-bottom: 10px;
+}
+#content_aside-tagCloud div a{
+	text-decoration: none;
+	color: #dcf2f8;
+	background-color: #23b7e5;
+	padding: 0.125rem 0.375rem;
+	border-radius: 0.25rem;
+	display: inline-block;
+	margin: 3px auto;
 }
 footer{
 	margin-left: 200px;
