@@ -154,7 +154,7 @@ $(document).ready(function(){
 					$("#panel_body>div").eq(i).find("span:eq(1)").find("i:eq(1)").css("display","none");
 				}
 			}
-			$("aside *").unbind();
+			$("aside *").off();
 			$("aside>.aside_nav-index1").remove();
 			$("aside>.aside_nav-index2").remove();
 			$("#aside_nav ul li a").removeAttr("on-off");
@@ -169,13 +169,13 @@ $(document).ready(function(){
 			});
 			switch(temp2){
 				case 2:
-					$("aside").bind("nav1",nav1());
+					nav1();
 					break;
 				case 3:
-					$("aside").bind("nav2",nav2());
+					nav2();
 					break;
 				case 4:
-					$("aside").bind("nav3",nav3());
+					nav3();
 					break;
 			}
 		}
