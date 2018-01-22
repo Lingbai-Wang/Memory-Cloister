@@ -16,7 +16,6 @@ body{
 }
 header{
 	height: 50px;
-	background-color: #7266ba;
 	position: fixed;
 	top: 0;
 	width: 1170px;
@@ -27,6 +26,7 @@ header #home{
 	display: inline-block;
 	width: 200px;
 	height: 100%;
+	background-color: #7266ba;
 }
 #home a{
 	display: inline-block;
@@ -47,6 +47,7 @@ header #home{
 header #header_container{
 	height: 100%;
 	margin-left: 200px;
+	background-color: #7266ba;
 }
 #header_container #header_btn{
 	float: left;
@@ -385,6 +386,48 @@ aside>.aside_nav-index2 .aside_nav-index3{
 	height: 100%;
 	float: left;
 }
+#content_container #content_alert{
+	padding: 15px;
+	background-color: #fcf8e3;
+	border: 1px #faebcc solid;
+}
+#content_alert #content_alert-content{
+	display: inline-block;
+}
+#content_alert-content i{
+	color: #8a6d3b;
+	margin-right: 2px;
+}
+#content_alert-content #content_alert-text{
+	color: #8a6d3b;
+}
+#content_alert #content_alert-btn{
+	float: right;
+	padding: 0;
+	border: 0;
+	outline: none;
+	cursor: pointer;
+	background-color: transparent;
+	opacity: 0.2;
+	line-height: 18px;
+}
+#content_container #content_header{
+	padding: 20px;
+	background-color: #f6f8f8;
+	border-bottom: 1px #dee5e7 solid;
+}
+#content_header #content_header-title1{
+	display: block;
+	font-size: 1.5rem;
+	font-weight: 300;
+}
+#content_header #content_header-title2{
+	display: block;
+	font-size: 0.8125rem;
+	font-weight: 300;
+	color: #98a6ad;
+	letter-spacing: 1px;
+}
 #content #content_aside{
 	width: 240px;
 	height: 100%;
@@ -512,7 +555,7 @@ aside>.aside_nav-index2 .aside_nav-index3{
 }
 #content_aside #content_aside-category{
 	height: 300px;
-	border: 1px green solid;
+	/*border: 1px green solid;*/
 }
 #content_aside #content_aside-tagCloud{
 	padding: 20px;

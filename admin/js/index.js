@@ -104,7 +104,6 @@ $(document).ready(function(){
 			$("#home").css({
 				"position":"",
 				"z-index":"",
-				"background-color":"",
 				"height":"",
 			});
 			$("#content").css("padding-top","");
@@ -115,7 +114,6 @@ $(document).ready(function(){
 			$("#home").css({
 				"position":"fixed",
 				"z-index":"100",
-				"background-color":"#7266ba",
 				"height":"50px",
 			});
 			$("#content").css("padding-top","0");
@@ -199,5 +197,9 @@ $(document).ready(function(){
 	});
 
 	$("#content_aside-tabs-top-1").triggerHandler("click");
+
+	$("#content_alert-btn").click(function(){
+		$("#content_alert").css("display","none");
+	});
 
 });
