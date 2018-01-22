@@ -392,6 +392,25 @@ aside>.aside_nav-index2 .aside_nav-index3{
 	border-left: 1px #dee5e7 solid;
 	background-color: #FFF;
 }
+#content_aside #content_aside-time{
+	height: 76px;
+}
+#content_aside-time #content_aside-time-countdown{
+	font-size: 1.5rem;
+	display: block;
+	text-align: center;
+	line-height: 76px;
+	color: #98a6ad;
+	display: none;
+}
+#content_aside-time #content_aside-time-clock{
+	font-size: 1rem;
+	display: block;
+	text-align: center;
+	line-height: 76px;
+	color: #98a6ad;
+	/*display: none;*/
+}
 #content_aside-tabs #content_aside-tabs-top{
 	height: 58px;
 }
@@ -412,6 +431,7 @@ aside>.aside_nav-index2 .aside_nav-index3{
 	width: calc(100% - 2px);
 	height: calc(100% - 2px);
 	border: 1px #FFF solid;
+	border-top: 1px #dee5e7 solid;
 	border-bottom: 1px #dee5e7 solid;
 	text-align: center;
 }
