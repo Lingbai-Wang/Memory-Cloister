@@ -4,13 +4,13 @@ html,body{
 }
 body{
 	font: 0.75rem/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
-	background-color: rgba(143,181,158,.8);
+	background: url("../imgs/bg.jpg") center center no-repeat fixed;
 	margin: 0;
 }
 #layout{
 	width: 1170px;
 	min-height: 100%;
-	background-color: rgba(240,243,244,1);
+	/*background-color: rgba(240,243,244,1);*/
 	margin: 0 auto;
 	box-shadow: 0 0 30px rgba(0,0,0,.3);
 }
@@ -381,6 +381,7 @@ aside>.aside_nav-index2 .aside_nav-index3{
 	height: 1300px;
 }
 #content #content_container{
+	background-color: rgba(240,243,244,1);
 	width: calc(100% - 241px);
 	height: 100%;
 	float: left;
