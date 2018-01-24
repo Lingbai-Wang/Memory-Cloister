@@ -217,9 +217,8 @@ aside{
 }
 aside #aside_container{
 	width: 200px;
-	position: fixed;
-	top: 50px;
-	bottom: 0;
+	margin-top: 50px;
+	height: calc(100% - 50px);
 	overflow: hidden;
 }
 #aside_container #aside_wrap{
@@ -672,5 +671,5 @@ footer div span{
 	background-color: #f6f8f8;
 	border-top: 1px #edf1f2 solid;
 	border-radius: 0 0 2px 2px;
-	height: 275px;
+	height: 240px;
 }

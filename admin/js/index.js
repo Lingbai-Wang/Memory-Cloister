@@ -87,7 +87,7 @@ $(document).ready(function(){
 	});
 
 	$("#panel_btn-0").click(function(){
-		var panelBtnStatus=new Array(true,true,false,false,true);
+		var panelBtnStatus=new Array(true,true,false,false,true,true);
 		$(".panel_toggle").each(function(i){
 			if(($(">i:eq(0)",this).css("display")=="inline-block"&&panelBtnStatus[i]==true)
 				||($(">i:eq(0)",this).css("display")=="none"&&panelBtnStatus[i]==false)){
@@ -96,7 +96,7 @@ $(document).ready(function(){
 		});
 	});
 
-	$("#panel_btn-1").click(function(){
+	$("#panel_btn-header").click(function(){
 		if($(">i:eq(0)",this).css("display")=="inline-block"){
 			$(">i:eq(0)",this).css("display","none");
 			$(">i:eq(1)",this).css("display","inline-block");
@@ -107,6 +107,9 @@ $(document).ready(function(){
 				"height":"",
 			});
 			$("#content").css("padding-top","");
+			if($(">i:eq(0)","#panel_btn-sidebar").css("display")=="inline-block"){
+				$("aside").css("top","");
+			}
 		}else{
 			$(">i:eq(0)",this).css("display","inline-block");
 			$(">i:eq(1)",this).css("display","none");
@@ -117,10 +120,14 @@ $(document).ready(function(){
 				"height":"50px",
 			});
 			$("#content").css("padding-top","0");
+			if($(">i:eq(0)","#panel_btn-sidebar").css("display")=="inline-block"){
+				$("aside").css("top","-50px");
+				$("#home").css("position","relative");
+			}
 		}
 	});
 
-	$("#panel_btn-2").click(function(){
+	$("#panel_btn-box").click(function(){
 		if($(">i:eq(0)",this).css("display")=="inline-block"){
 			$(">i:eq(0)",this).css("display","none");
 			$(">i:eq(1)",this).css("display","inline-block");
@@ -134,7 +141,7 @@ $(document).ready(function(){
 		}
 	});
 
-	$("#panel_btn-3,#panel_btn-4,#panel_btn-5").click(function(){
+	$("#panel_btn-nav1,#panel_btn-nav2,#panel_btn-nav3").click(function(){
 		if($(">i:eq(0)",this).css("display")=="inline-block"){
 			$(">i:eq(0)",this).css("display","none");
 			$(">i:eq(1)",this).css("display","inline-block");
@@ -175,6 +182,34 @@ $(document).ready(function(){
 				case 4:
 					$("aside").on("nav3",nav3());
 					break;
+			}
+		}
+	});
+
+	$("#panel_btn-sidebar").click(function(){
+		if($(">i:eq(0)",this).css("display")=="inline-block"){
+			$(">i:eq(0)",this).css("display","none");
+			$(">i:eq(1)",this).css("display","inline-block");
+			$("aside").css({
+				"position":"",
+				"float":"",
+				"height":"",
+			});
+			if($(">i:eq(0)","#panel_btn-header").css("display")=="inline-block"){
+				$("aside").css("top","");
+				$("#home").css("position","fixed");
+			}
+		}else{
+			$(">i:eq(0)",this).css("display","inline-block");
+			$(">i:eq(1)",this).css("display","none");
+			$("aside").css({
+				"position":"relative",
+				"float":"left",
+				"height":$("#layout").height(),
+			});
+			if($(">i:eq(0)","#panel_btn-header").css("display")=="inline-block"){
+				$("aside").css("top","-50px");
+				$("#home").css("position","relative");
 			}
 		}
 	});
