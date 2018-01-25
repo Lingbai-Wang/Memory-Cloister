@@ -652,19 +652,31 @@ footer div span{
 	font-size: 0.875rem;
 	color: #58666e;
 }
-#panel_body div .panel_toggle{
+#panel_body .panel_toggle{
 	float: right;
 	height: 30px;
 }
-#panel_body div .panel_toggle i{
+#panel_body .panel_toggle i{
 	font-size: 30px;
 }
-#panel_body div .panel_toggle i:nth-child(1){
+#panel_body .panel_toggle i:nth-child(1){
 	color: #dcf2f8;
 }
-#panel_body div .panel_toggle i:nth-child(2){
+#panel_body .panel_toggle i:nth-child(2){
 	color: #23b7e5;
 	display: none;
+}
+#panel_body #panel_btn-header i:nth-child(1),
+#panel_body #panel_btn-sidebar i:nth-child(1),
+#panel_body #panel_btn-box i:nth-child(1){
+	color: #dcf2f8;
+	display: none;
+}
+#panel_body #panel_btn-header i:nth-child(2),
+#panel_body #panel_btn-sidebar i:nth-child(2),
+#panel_body #panel_btn-box i:nth-child(2){
+	color: #23b7e5;
+	display: inline-block;
 }
 #panel #theme_container{
 	padding: 15px;
