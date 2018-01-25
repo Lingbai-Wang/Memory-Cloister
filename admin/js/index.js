@@ -87,7 +87,7 @@ $(document).ready(function(){
 	});
 
 	$("#panel_btn-0").click(function(){
-		var panelBtnStatus=new Array(true,true,false,false,true,true);
+		var panelBtnStatus=new Array(true,true,true,false,false,true);
 		$(".panel_toggle").each(function(i){
 			if(($(">i:eq(0)",this).css("display")=="inline-block"&&panelBtnStatus[i]==true)
 				||($(">i:eq(0)",this).css("display")=="none"&&panelBtnStatus[i]==false)){
@@ -127,6 +127,34 @@ $(document).ready(function(){
 		}
 	});
 
+	$("#panel_btn-sidebar").click(function(){
+		if($(">i:eq(0)",this).css("display")=="inline-block"){
+			$(">i:eq(0)",this).css("display","none");
+			$(">i:eq(1)",this).css("display","inline-block");
+			$("aside").css({
+				"position":"",
+				"float":"",
+				"height":"",
+			});
+			if($(">i:eq(0)","#panel_btn-header").css("display")=="inline-block"){
+				$("aside").css("top","");
+				$("#home").css("position","fixed");
+			}
+		}else{
+			$(">i:eq(0)",this).css("display","inline-block");
+			$(">i:eq(1)",this).css("display","none");
+			$("aside").css({
+				"position":"relative",
+				"float":"left",
+				"height":$("#layout").height(),
+			});
+			if($(">i:eq(0)","#panel_btn-header").css("display")=="inline-block"){
+				$("aside").css("top","-50px");
+				$("#home").css("position","relative");
+			}
+		}
+	});
+
 	$("#panel_btn-box").click(function(){
 		if($(">i:eq(0)",this).css("display")=="inline-block"){
 			$(">i:eq(0)",this).css("display","none");
@@ -153,7 +181,7 @@ $(document).ready(function(){
 					return false;
 				}
 			});
-			for(var i=2;i<5;i++){
+			for(var i=3;i<6;i++){
 				if($("#panel_body>div").eq(i).find("span:eq(1)").is(temp1)==false){
 					$("#panel_body>div").eq(i).find("span:eq(1)").find("i:eq(0)").css("display","inline-block");
 					$("#panel_body>div").eq(i).find("span:eq(1)").find("i:eq(1)").css("display","none");
@@ -173,43 +201,15 @@ $(document).ready(function(){
 				"display":"",
 			});
 			switch(temp2){
-				case 2:
+				case 3:
 					$("aside").on("nav1",nav1());
 					break;
-				case 3:
+				case 4:
 					$("aside").on("nav2",nav2());
 					break;
-				case 4:
+				case 5:
 					$("aside").on("nav3",nav3());
 					break;
-			}
-		}
-	});
-
-	$("#panel_btn-sidebar").click(function(){
-		if($(">i:eq(0)",this).css("display")=="inline-block"){
-			$(">i:eq(0)",this).css("display","none");
-			$(">i:eq(1)",this).css("display","inline-block");
-			$("aside").css({
-				"position":"",
-				"float":"",
-				"height":"",
-			});
-			if($(">i:eq(0)","#panel_btn-header").css("display")=="inline-block"){
-				$("aside").css("top","");
-				$("#home").css("position","fixed");
-			}
-		}else{
-			$(">i:eq(0)",this).css("display","inline-block");
-			$(">i:eq(1)",this).css("display","none");
-			$("aside").css({
-				"position":"relative",
-				"float":"left",
-				"height":$("#layout").height(),
-			});
-			if($(">i:eq(0)","#panel_btn-header").css("display")=="inline-block"){
-				$("aside").css("top","-50px");
-				$("#home").css("position","relative");
 			}
 		}
 	});
