@@ -142,15 +142,6 @@ function nav2(){
 	}else{
 		$("#aside_wrap").on("scroll",scrollComponent);
 	}
-	$("#panel_btn-sidebar").click(function(){
-		if($(">i:eq(0)",this).css("display")=="inline-block"){
-			$("#aside_wrap").off("scroll");
-			$(window).on("scroll",scrollComponent);
-		}else{
-			$(window).off("scroll");
-			$("#aside_wrap").on("scroll",scrollComponent);
-		}
-	});
 	function scrollComponent(){
 
 		core2($("aside>.aside_nav-index1"),$("#aside_nav .aside_nav-index0>li>a"));

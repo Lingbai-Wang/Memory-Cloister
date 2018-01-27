@@ -199,6 +199,10 @@ $(document).ready(function(){
 				});
 			}
 		}
+		if($(">i:eq(0)","#panel_btn-nav2").css("display")=="none"){
+			$("#panel_btn-nav3").triggerHandler("click");
+			$("#panel_btn-nav2").triggerHandler("click");
+		}
 	});
 
 	$("#panel_btn-box").click(function(){
