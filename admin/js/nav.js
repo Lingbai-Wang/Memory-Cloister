@@ -155,6 +155,10 @@ function nav3(){
 				indexHeight+=$(this).height();
 			});
 			var headerHeight=$("header").height();
+			if($(">i:eq(0)","#panel_btn-header").css("display")=="inline-block" 
+				&& $(">i:eq(0)","#panel_btn-sidebar").css("display")=="inline-block"){
+				headerHeight=0;
+			}
 			if(indexHeight>(h-headerHeight)){
 				$(index).height(h-headerHeight);
 				$(index).width(indexWidth-$(index).width()+indexWidth);
@@ -175,7 +179,7 @@ function nav3(){
 	/*左侧导航-树形-移入移出-零级菜单控制一级菜单-开始*/
 	$("#aside_nav .aside_nav-index0 li a").hover(function(){
 
-		core($(this),"aside>.aside_nav-index1","calc(100% + 0px)",160);
+		core($(this),"aside>.aside_nav-index1",$("aside").offset().left+$("aside").width()+0,160);
 
 	},function(){
 		var thisTemp0=$(this);			
@@ -190,12 +194,11 @@ function nav3(){
 
 			/*二级菜单第一次显示-开始*/
 			$(this).one("mousemove",function(e){
-				var r=$(this).get(0).getBoundingClientRect();
 				var temp1=Math.floor((e.pageY-$(this).offset().top)
 					/$(this).children().eq(0).height());
 				var temp2=$(this).children().eq(temp1).children("a");
 
-				core(temp2,"aside>.aside_nav-index2","calc(100% + 160px)",160);
+				core(temp2,"aside>.aside_nav-index2",$("aside").offset().left+$("aside").width()+160,160);
 
 			});
 			/*二级菜单第一次显示-结束*/
@@ -203,7 +206,7 @@ function nav3(){
 			/*左侧导航-树形-移入移出-一级菜单控制二级菜单-开始*/
 			$("aside>.aside_nav-index1 li a").hover(function(){
 				
-				core($(this),"aside>.aside_nav-index2","calc(100% + 160px)",160);
+				core($(this),"aside>.aside_nav-index2",$("aside").offset().left+$("aside").width()+160,160);
 
 			},function(){
 				var thisTemp1=$(this);			
