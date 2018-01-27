@@ -217,8 +217,9 @@ aside{
 }
 aside #aside_container{
 	width: 200px;
-	margin-top: 50px;
-	height: calc(100% - 50px);
+	position: fixed;
+	top: 50px;
+	bottom: 0;
 	overflow: hidden;
 }
 #aside_container #aside_wrap{
@@ -332,7 +333,7 @@ aside>.aside_nav-index1{
 	padding: 0;
 	width: 160px;
 	background-color: #2e3344;
-	position: absolute;
+	position: fixed;
 	overflow: auto;
 }
 aside>.aside_nav-index1 li{
@@ -356,7 +357,7 @@ aside>.aside_nav-index2{
 	padding: 0;
 	width: 160px;
 	background-color: #2e3344;
-	position: absolute;
+	position: fixed;
 	overflow: auto;
 }
 aside>.aside_nav-index2 li{

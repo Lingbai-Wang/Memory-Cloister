@@ -107,8 +107,15 @@ $(document).ready(function(){
 				"height":"",
 			});
 			$("#content").css("padding-top","");
+			// if($(">i:eq(0)","#panel_btn-sidebar").css("display")=="inline-block"){
+			// 	$("aside").css("top","");
+			// }
 			if($(">i:eq(0)","#panel_btn-sidebar").css("display")=="inline-block"){
-				$("aside").css("top","");
+				$("aside").css("height",$("#layout").height());
+				$("#aside_container").css({
+					"margin-top":$("header").height(),
+					"height":"calc(100% - "+$("header").height()+"px)",
+				});
 			}
 		}else{
 			$(">i:eq(0)",this).css("display","inline-block");
@@ -120,9 +127,17 @@ $(document).ready(function(){
 				"height":"50px",
 			});
 			$("#content").css("padding-top","0");
+			// if($(">i:eq(0)","#panel_btn-sidebar").css("display")=="inline-block"){
+			// 	$("aside").css("top","-50px");
+			// 	$("#home").css("position","relative");
+			// }
 			if($(">i:eq(0)","#panel_btn-sidebar").css("display")=="inline-block"){
-				$("aside").css("top","-50px");
-				$("#home").css("position","relative");
+				$("#home").css("position","");
+				$("aside").css("height",$("#layout").height()-$("header").height());
+				$("#aside_container").css({
+					"margin-top":"",
+					"height":"100%",
+				});
 			}
 		}
 	});
@@ -131,26 +146,57 @@ $(document).ready(function(){
 		if($(">i:eq(0)",this).css("display")=="inline-block"){
 			$(">i:eq(0)",this).css("display","none");
 			$(">i:eq(1)",this).css("display","inline-block");
+			// $("aside").css({
+			// 	"position":"",
+			// 	"float":"",
+			// 	"height":"",
+			// });
+			// if($(">i:eq(0)","#panel_btn-header").css("display")=="inline-block"){
+			// 	$("aside").css("top","");
+			// 	$("#home").css("position","fixed");
+			// }
 			$("aside").css({
 				"position":"",
 				"float":"",
 				"height":"",
 			});
+			$("#aside_container").css({
+				"position":"",
+				"margin-top":"",
+				"height":"",
+			});
 			if($(">i:eq(0)","#panel_btn-header").css("display")=="inline-block"){
-				$("aside").css("top","");
 				$("#home").css("position","fixed");
 			}
 		}else{
 			$(">i:eq(0)",this).css("display","inline-block");
 			$(">i:eq(1)",this).css("display","none");
+			// $("aside").css({
+			// 	"position":"relative",
+			// 	"float":"left",
+			// 	"height":$("#layout").height(),
+			// });
+			// if($(">i:eq(0)","#panel_btn-header").css("display")=="inline-block"){
+			// 	$("aside").css("top","-50px");
+			// 	$("#home").css("position","relative");
+			// }
 			$("aside").css({
-				"position":"relative",
+				"position":"static",
 				"float":"left",
 				"height":$("#layout").height(),
 			});
+			$("#aside_container").css({
+				"position":"static",
+				"margin-top":$("header").height(),
+				"height":"calc(100% - "+$("header").height()+"px)",
+			});
 			if($(">i:eq(0)","#panel_btn-header").css("display")=="inline-block"){
-				$("aside").css("top","-50px");
-				$("#home").css("position","relative");
+				$("#home").css("position","static");
+				$("aside").css("height",$("#layout").height()-$("header").height());
+				$("#aside_container").css({
+					"margin-top":"",
+					"height":"100%",
+				});
 			}
 		}
 	});
