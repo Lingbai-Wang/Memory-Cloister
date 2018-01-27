@@ -233,6 +233,7 @@ $(document).ready(function(){
 					$("#panel_body>div").eq(i).find("span:eq(1)").find("i:eq(1)").css("display","none");
 				}
 			}
+			$(window).off("scroll");
 			$("aside,aside *").off();
 			$("aside>.aside_nav-index1").remove();
 			$("aside>.aside_nav-index2").remove();
