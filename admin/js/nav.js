@@ -49,16 +49,30 @@ function nav2(){
 				if(indexHeight>(h-headerHeight)){
 					$(index).height(h-headerHeight);
 					$(index).width(indexWidth-$(index).width()+indexWidth);
+					/*extra-begin*/
+					$(index).css("left",indexLeft);
+					$(index).css("top","auto");
+					$(index).css("bottom",0);
+					return false;
+					/*extra-end*/
 				}
 				var r1=aThis.get(0).getBoundingClientRect();
 				$(index).css("left",indexLeft);
 				$(index).css("top",r1.top);
 				$(index).css("bottom","auto");
 				var r2=$(index).get(0).getBoundingClientRect();
-				if(r2.bottom>h){
+				/*original-begin*/
+				// if(r2.bottom>h){
+				// 	$(index).css("top","auto");
+				// 	$(index).css("bottom",0);
+				// }
+				/*original-end*/
+				/*extra-begin*/
+				if(aThis.offset().top>($("#layout").height()-indexHeight)){
 					$(index).css("top","auto");
-					$(index).css("bottom",0);
+					$(index).css("bottom",-($("#layout").height()-(window.pageYOffset+h)));
 				}
+				/*extra-end*/
 			}else{
 				$(">span>i:eq(0)",aThis).css("display","inline-block");
 				$(">span>i:eq(1)",aThis).css("display","none");
@@ -92,6 +106,7 @@ function nav2(){
 				&& $(">i:eq(0)","#panel_btn-sidebar").css("display")=="inline-block"){
 				headerHeight=0;
 			}
+			/*original-begin*/
 			// if(index.height()<(h-headerHeight)){
 			// 	if(r1.top<headerHeight){
 			// 		index.css("top",headerHeight);
@@ -104,6 +119,8 @@ function nav2(){
 			// 		index.css("bottom","auto");
 			// 	}
 			// }
+			/*original-end*/
+			/*extra-begin*/
 			if(index.height()<(h-headerHeight)){
 				if(controller.offset().top>($("#layout").height()-h1)){
 					index.css("top","auto");
@@ -113,6 +130,7 @@ function nav2(){
 					index.css("bottom","auto");
 				}
 			}
+			/*extra-end*/
 		}
 	}
 	/*core2-结束*/
