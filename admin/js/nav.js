@@ -92,13 +92,22 @@ function nav2(){
 				&& $(">i:eq(0)","#panel_btn-sidebar").css("display")=="inline-block"){
 				headerHeight=0;
 			}
+			// if(index.height()<(h-headerHeight)){
+			// 	if(r1.top<headerHeight){
+			// 		index.css("top",headerHeight);
+			// 		index.css("bottom","auto");
+			// 	}else if(r1.top>(h-h1)){
+			// 		index.css("top","auto");
+			// 		index.css("bottom",0);
+			// 	}else{
+			// 		index.css("top",r1.top);
+			// 		index.css("bottom","auto");
+			// 	}
+			// }
 			if(index.height()<(h-headerHeight)){
-				if(r1.top<headerHeight){
-					index.css("top",headerHeight);
-					index.css("bottom","auto");
-				}else if(r1.top>(h-h1)){
+				if(controller.offset().top>($("#layout").height()-h1)){
 					index.css("top","auto");
-					index.css("bottom",0);
+					index.css("bottom",-($("#layout").height()-(window.pageYOffset+h)));
 				}else{
 					index.css("top",r1.top);
 					index.css("bottom","auto");
@@ -139,6 +148,7 @@ function nav2(){
 	/*左侧导航-树形-点击-零级菜单控制一级菜单（滚动）-开始*/
 	if($(">i:eq(0)","#panel_btn-sidebar").css("display")=="inline-block"){
 		$(window).on("scroll",scrollComponent);
+		$("#aside_wrap").on("scroll",scrollComponent);
 	}else{
 		$("#aside_wrap").on("scroll",scrollComponent);
 	}
