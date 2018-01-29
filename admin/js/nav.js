@@ -235,7 +235,7 @@ function nav3(){
 
 			/*二级菜单第一次显示-开始*/
 			$(this).one("mousemove",function(e){
-				var temp1=Math.floor((e.pageY-$(this).offset().top)
+				var temp1=Math.floor((e.pageY-$(this).offset().top+$(this).scrollTop())
 					/$(this).children().eq(0).height());
 				var temp2=$(this).children().eq(temp1).children("a");
 
