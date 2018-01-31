@@ -2,13 +2,13 @@ $(document).ready(function(){
 
 	$("#header_aside-btn").click(function(){
 		if ($("#home").css("width")=="200px") {
-			$("#home").css("width","60px");
+			$("#home").css("width","50px");
 			$("#home").find("span").css("display","none");
-			$("#header_container").css("margin-left","60px");
-			$("aside").css("width","60px");
-			$("#aside_container").css("width","60px");
-			$("#aside_wrap").css("width","80px");
-			$("#aside_wrap>*").css("width","60px");
+			$("#header_container").css("margin-left","50px");
+			$("aside").css("width","50px");
+			$("#aside_container").css("width","50px");
+			$("#aside_wrap").css("width","70px");
+			$("#aside_wrap>*").css("width","50px");
 			$("#aside_userinfo>a:eq(0)").css({
 				"width":"30px",
 				"height":"30px",
@@ -30,8 +30,8 @@ $(document).ready(function(){
 				"line-height":"50px",
 			});
 			$("#aside_nav>ul>li>a>span").css("display","none");
-			$("#content").css("margin-left","60px");
-			$("footer").css("margin-left","60px");
+			$("#content").css("margin-left","50px");
+			$("footer").css("margin-left","50px");
 		}else{			
 			$("#home").css("width","");
 			$("#home").find("span").css("display","");
