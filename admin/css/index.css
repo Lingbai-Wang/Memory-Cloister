@@ -55,19 +55,19 @@ header #header_container{
 #header_container a{
 	color: #58666e;
 }
-#header_container #header_btn{
+#header_container #header_left{
 	float: left;
 	height: 100%;
 	width: 88px;
 	margin-left: 15px;
 }
-#header_btn #header_aside-btn{
+#header_left #header_aside-btn{
 	display: inline-block;
 	width: 44px;
 	height: 100%;
 	float: left;
 }
-#header_btn #header_user-btn{
+#header_left #header_user-btn{
 	display: inline-block;
 	width: 44px;
 	height: 100%;
@@ -128,77 +128,51 @@ header #header_container{
 	color: #58666e;
 	line-height: 30px;
 }
-#header_container #header_userinfo{
+#header_container #header_right{
 	float: right;
 	height: 100%;
 	width: 224px;
 }
-#header_userinfo #header_userinfo-set{
+#header_right #header_message,
+#header_right #header_notification,
+#header_right #header_set{
 	width: 46px;
 	height: 100%;
 	float: left;
 }
-#header_userinfo-set a{
+#header_message>a,
+#header_notification>a,
+#header_set>a{
 	display: inline-block;
 	width: 100%;
 	height: 100%;
 }
-#header_userinfo-set a i{
+#header_message>a i,
+#header_notification>a i,
+#header_set>a i{
 	font-size: 0.87rem;
 	line-height: 50px;
 	width: 100%;
 	text-align: center;
 }
-#header_userinfo #header_userinfo-email{
-	width: 46px;
-	height: 100%;
-	float: left;
-}
-#header_userinfo-email a{
-	display: inline-block;
-	width: 100%;
-	height: 100%;
-}
-#header_userinfo-email a i{
-	font-size: 0.87rem;
-	line-height: 50px;
-	width: 100%;
-	text-align: center;
-}
-#header_userinfo #header_userinfo-message{
-	width: 46px;
-	height: 100%;
-	float: left;
-}
-#header_userinfo-message a{
-	display: inline-block;
-	width: 100%;
-	height: 100%;
-}
-#header_userinfo-message a i{
-	font-size: 0.87rem;
-	line-height: 50px;
-	width: 100%;
-	text-align: center;
-}
-#header_userinfo #header_userinfo-login{
+#header_right #header_login{
 	width: 76px;
 	height: 100%;
 	float: right;
 }
-#header_userinfo-login a{
+#header_login a{
 	display: inline-block;
 	width: 100%;
 	height: 100%;
 }
-#header_userinfo-login a span{
+#header_login a span{
 	display: inline-block;
 	height: 100%;
 	line-height: 50px;
 	float: left;
 	margin-left: 19px;
 }
-#header_userinfo-login a i{
+#header_login a i{
 	display: inline-block;
 	height: 100%;
 	line-height: 50px;
