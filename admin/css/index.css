@@ -355,7 +355,7 @@ aside>.aside_nav-index2{
 	list-style: none;
 	margin: 0;
 	padding: 0;
-	width: 160px;
+	width: 180px;
 	background-color: #2e3344;
 	position: fixed;
 	overflow: auto;
@@ -368,7 +368,7 @@ aside>.aside_nav-index1 li a,
 aside>.aside_nav-index2 li a{
 	display: block;
 	text-decoration: none;
-	padding: 9px 8px;
+	padding: 9px 14px;
 	color: #b4b6bd;
 }
 aside>.aside_nav-index1 li a>i,

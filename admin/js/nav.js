@@ -68,13 +68,13 @@ function nav2(){
 		$("aside>.aside_nav-index1").remove();
 		$("aside>.aside_nav-index2").remove();
 
-		core($(this),"aside>.aside_nav-index1",$("aside").offset().left+$("aside").width()+0,160,$("#aside_nav .aside_nav-index0>li>a"));
+		core($(this),"aside>.aside_nav-index1",$("aside").offset().left+$("aside").width()+0,180,$("#aside_nav .aside_nav-index0>li>a"));
 
 		/*左侧导航-柱形-点击-一级菜单控制二级菜单-开始*/
 		$("aside>.aside_nav-index1>li>a").click(function(){
 			$("aside>.aside_nav-index2").remove();
 
-			core($(this),"aside>.aside_nav-index2",$("aside").offset().left+$("aside").width()+160,160,$("aside>.aside_nav-index1>li>a"));
+			core($(this),"aside>.aside_nav-index2",$("aside").offset().left+$("aside").width()+180,180,$("aside>.aside_nav-index1>li>a"));
 
 		});
 		/*左侧导航-柱形-点击-一级菜单控制二级菜单-结束*/
@@ -122,7 +122,7 @@ function nav3(){
 	/*左侧导航-树形-移入移出-零级菜单控制一级菜单-开始*/
 	$("#aside_nav .aside_nav-index0 li a").hover(function(){
 
-		core($(this),"aside>.aside_nav-index1",$("aside").offset().left+$("aside").width()+0,160);
+		core($(this),"aside>.aside_nav-index1",$("aside").offset().left+$("aside").width()+0,180);
 
 	},function(){
 		var thisTemp0=$(this);			
@@ -141,7 +141,7 @@ function nav3(){
 					/$(this).children().eq(0).height());
 				var temp2=$(this).children().eq(temp1).children("a");
 
-				core(temp2,"aside>.aside_nav-index2",$("aside").offset().left+$("aside").width()+160,160);
+				core(temp2,"aside>.aside_nav-index2",$("aside").offset().left+$("aside").width()+180,180);
 
 			});
 			/*二级菜单第一次显示-结束*/
@@ -149,7 +149,7 @@ function nav3(){
 			/*左侧导航-树形-移入移出-一级菜单控制二级菜单-开始*/
 			$("aside>.aside_nav-index1 li a").hover(function(){
 				
-				core($(this),"aside>.aside_nav-index2",$("aside").offset().left+$("aside").width()+160,160);
+				core($(this),"aside>.aside_nav-index2",$("aside").offset().left+$("aside").width()+180,180);
 
 			},function(){
 				var thisTemp1=$(this);			
@@ -318,13 +318,13 @@ function nav4(){
 		$("aside>.aside_nav-index1").remove();
 		$("aside>.aside_nav-index2").remove();
 
-		core1($(this),"aside>.aside_nav-index1",$("aside").offset().left+$("aside").width()+0,160,$("#aside_nav .aside_nav-index0>li>a"));
+		core1($(this),"aside>.aside_nav-index1",$("aside").offset().left+$("aside").width()+0,180,$("#aside_nav .aside_nav-index0>li>a"));
 
 		/*左侧导航-树形-点击-一级菜单控制二级菜单（固定）-开始*/
 		$("aside>.aside_nav-index1>li>a").click(function(){
 			$("aside>.aside_nav-index2").remove();
 
-			core1($(this),"aside>.aside_nav-index2",$("aside").offset().left+$("aside").width()+160,160,$("aside>.aside_nav-index1>li>a"));
+			core1($(this),"aside>.aside_nav-index2",$("aside").offset().left+$("aside").width()+180,180,$("aside>.aside_nav-index1>li>a"));
 
 		});
 		/*左侧导航-树形-点击-一级菜单控制二级菜单（固定）-结束*/
