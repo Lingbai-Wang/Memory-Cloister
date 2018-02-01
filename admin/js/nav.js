@@ -21,10 +21,10 @@ function nav1(){
 }
 /*左侧导航-切换-点击-结束*/
 
-/*左侧导航-树形-点击-开始*/
+/*左侧导航-柱形-点击-开始*/
 function nav2(){
-	/*core1-开始*/
-	function core1(aThis,index,indexLeft,indexWidth,clean){
+	/*core-开始*/
+	function core(aThis,index,indexLeft,indexWidth,clean){
 		if(aThis.next().length>0){
 			if(aThis.attr("on-off")=="off"){
 				clean.each(function(){
@@ -37,43 +37,16 @@ function nav2(){
 				aThis.attr("on-off","on");
 				aThis.next().clone().appendTo($("aside"));
 				var h=document.documentElement.clientHeight||document.body.clientHeight;
-				var indexHeight=0;
-				$(index).children().each(function(){
-					indexHeight+=$(this).height();
-				});
 				var headerHeight=$("header").height();
 				if($(">i:eq(0)","#panel_btn-header").css("display")=="inline-block" 
 					&& $(">i:eq(0)","#panel_btn-sidebar").css("display")=="inline-block"){
 					headerHeight=0;
 				}
-				if(indexHeight>(h-headerHeight)){
-					$(index).height(h-headerHeight);
-					$(index).width(indexWidth-$(index).width()+indexWidth);
-					/*extra-begin*/
-					// $(index).css("left",indexLeft);
-					// $(index).css("top","auto");
-					// $(index).css("bottom",0);
-					// return false;
-					/*extra-end*/
-				}
-				var r1=aThis.get(0).getBoundingClientRect();
+				$(index).height(h-headerHeight);
+				$(index).width(indexWidth-$(index).width()+indexWidth);
 				$(index).css("left",indexLeft);
-				$(index).css("top",r1.top);
-				$(index).css("bottom","auto");
-				var r2=$(index).get(0).getBoundingClientRect();
-				/*original-begin*/
-				if(r2.bottom>h){
-					$(index).css("top","auto");
-					$(index).css("bottom",0);
-				}
-				/*original-end*/
-
-				/*extra-begin*/
-				// if(aThis.offset().top>($("#layout").height()-indexHeight)){
-				// 	$(index).css("top","auto");
-				// 	$(index).css("bottom",-($("#layout").height()-(window.pageYOffset+h)));
-				// }
-				/*extra-end*/
+				$(index).css("top","auto");
+				$(index).css("bottom",0);
 			}else{
 				$(">span>i:eq(0)",aThis).css("display","inline-block");
 				$(">span>i:eq(1)",aThis).css("display","none");
@@ -87,101 +60,28 @@ function nav2(){
 			});
 		}
 	}
-	/*core1-结束*/
+	/*core-结束*/
 
-	/*core2-开始*/
-	function core2(index,controllers){
-		if(index.length>0){
-			var h=document.documentElement.clientHeight||document.body.clientHeight;
-			var h1=index.height();
-			var controller;
-			controllers.each(function(){
-				if($(this).attr("on-off")=="on"){
-					controller=$(this);
-				}
-			});
-			var r1=controller.get(0).getBoundingClientRect();
-			var r2=index.get(0).getBoundingClientRect();
-			var headerHeight=$("header").height();
-			if($(">i:eq(0)","#panel_btn-header").css("display")=="inline-block" 
-				&& $(">i:eq(0)","#panel_btn-sidebar").css("display")=="inline-block"){
-				headerHeight=0;
-			}
-			/*original-begin*/
-			if(index.height()<(h-headerHeight)){
-				if(r1.top<headerHeight){
-					index.css("top",headerHeight);
-					index.css("bottom","auto");
-				}else if(r1.top>(h-h1)){
-					index.css("top","auto");
-					index.css("bottom",0);
-				}else{
-					index.css("top",r1.top);
-					index.css("bottom","auto");
-				}
-			}
-			/*original-end*/
-
-			/*extra-begin*/
-			// if(index.height()<(h-headerHeight)){
-			// 	if(controller.offset().top>($("#layout").height()-h1)){
-			// 		index.css("top","auto");
-			// 		index.css("bottom",-($("#layout").height()-(window.pageYOffset+h)));
-			// 	}else{
-			// 		index.css("top",r1.top);
-			// 		index.css("bottom","auto");
-			// 	}
-			// }
-			/*extra-end*/
-		}
-	}
-	/*core2-结束*/
-
-	/*左侧导航-树形-点击-零级菜单控制一级菜单（固定）-开始*/
+	/*左侧导航-柱形-点击-零级菜单控制一级菜单-开始*/
 	$("#aside_nav ul li a").attr("on-off","off");
 	$("#aside_nav .aside_nav-index0>li>a").click(function(){
 		$("aside>.aside_nav-index1").remove();
 		$("aside>.aside_nav-index2").remove();
 
-		core1($(this),"aside>.aside_nav-index1",$("aside").offset().left+$("aside").width()+0,160,$("#aside_nav .aside_nav-index0>li>a"));
+		core($(this),"aside>.aside_nav-index1",$("aside").offset().left+$("aside").width()+0,160,$("#aside_nav .aside_nav-index0>li>a"));
 
-		/*左侧导航-树形-点击-一级菜单控制二级菜单（固定）-开始*/
+		/*左侧导航-柱形-点击-一级菜单控制二级菜单-开始*/
 		$("aside>.aside_nav-index1>li>a").click(function(){
 			$("aside>.aside_nav-index2").remove();
 
-			core1($(this),"aside>.aside_nav-index2",$("aside").offset().left+$("aside").width()+160,160,$("aside>.aside_nav-index1>li>a"));
+			core($(this),"aside>.aside_nav-index2",$("aside").offset().left+$("aside").width()+160,160,$("aside>.aside_nav-index1>li>a"));
 
 		});
-		/*左侧导航-树形-点击-一级菜单控制二级菜单（固定）-结束*/
-
-		/*左侧导航-树形-点击-一级菜单控制二级菜单（滚动）-开始*/
-		$("aside>.aside_nav-index1").scroll(function(){
-			
-			core2($("aside>.aside_nav-index2"),$("aside>.aside_nav-index1>li>a"));
-
-		});
-		/*左侧导航-树形-点击-一级菜单控制二级菜单（滚动）-结束*/
-
+		/*左侧导航-柱形-点击-一级菜单控制二级菜单-结束*/
 	});
-	/*左侧导航-树形-点击-零级菜单控制一级菜单（固定）-结束*/
-
-	/*左侧导航-树形-点击-零级菜单控制一级菜单（滚动）-开始*/
-	if($(">i:eq(0)","#panel_btn-sidebar").css("display")=="inline-block"){
-		$(window).on("scroll",scrollComponent);
-		$("#aside_wrap").on("scroll",scrollComponent);
-	}else{
-		$("#aside_wrap").on("scroll",scrollComponent);
-	}
-	function scrollComponent(){
-
-		core2($("aside>.aside_nav-index1"),$("#aside_nav .aside_nav-index0>li>a"));
-
-		core2($("aside>.aside_nav-index2"),$("aside>.aside_nav-index1>li>a"));
-
-	};
-	/*左侧导航-树形-点击-零级菜单控制一级菜单（滚动）-结束*/
+	/*左侧导航-柱形-点击-零级菜单控制一级菜单-结束*/
 }
-/*左侧导航-树形-点击-结束*/
+/*左侧导航-柱形-点击-结束*/
 
 /*左侧导航-树形-移入移出-开始*/
 function nav3(){
