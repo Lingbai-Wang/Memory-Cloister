@@ -89,16 +89,12 @@ header #header_container{
 }
 #header_container #header_search{
 	float: left;
-	height: 100%;
 	width: 170px;
 	margin-left: 15px;
-}
-#header_search form{
-	height: 22px;
 	padding-top: 14px;
 	padding-bottom: 14px;
 }
-#header_search form #header_search-content{
+#header_search #header_search-content{
 	width: 144px;
 	height: 22px;
 	padding: 0px;
@@ -113,7 +109,7 @@ header #header_container{
 	font-size: 0.75rem;
 	color: #555;
 }
-#header_search form #header_search-btn{
+#header_search #header_search-btn{
 	width: 26px;
 	height: 22px;
 	padding: 0px;
@@ -266,6 +262,41 @@ aside #aside_container{
 	height: 1px;
 	margin: 10px 0;
 	background-color: #2e3344;
+}
+#aside_container #aside_search{
+	text-align: center;
+	padding-top: 14px;
+	padding-bottom: 14px;
+}
+#aside_search #aside_search-content{
+	width: 144px;
+	height: 22px;
+	padding: 0px;
+	border: 0px;
+	outline: none;
+	background-color: rgba(240,243,244,1);
+	border-top-left-radius:500px;
+	border-bottom-left-radius:500px;
+	padding-left: 15px;
+	padding-right: 2px;
+	font-size: 0.75rem;
+	color: #555;
+}
+#aside_search #aside_search-btn{
+	width: 26px;
+	height: 22px;
+	padding: 0px;
+	border: 0px;
+	outline: none;
+	background-color: rgba(240,243,244,1);
+	border-top-right-radius:500px;
+	border-bottom-right-radius:500px;
+}
+#aside_search-btn i{
+	font-size: 0.75rem;
+	color: #58666e;
+	line-height: 22px;
+	margin-right: 3px;
 }
 #aside_nav ul{
 	list-style: none;
