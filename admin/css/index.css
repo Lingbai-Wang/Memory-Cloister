@@ -27,22 +27,38 @@ header #home{
 	width: 200px;
 	height: 100%;
 	background-color: #7266ba;
-}
-#home a{
-	display: inline-block;
-	width: 100%;
-	height: 100%;
-	text-decoration: none;
 	text-align: center;
 }
-#home a i{
+#home #home_logo{
+	display: inline-block;
+	height: 100%;
+	text-decoration: none;
+	margin-left: 18px;
+	float: left;
+}
+#home_logo i{
 	font-size: 1.25rem;
 	color: #FFF;
 	line-height: 50px;
 }
-#home a span{
+#home_logo span{
 	font-size: 1rem;
 	color: #FFF;
+}
+#home #home_aside-btn{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	text-decoration: none;
+	text-align: center;
+	margin: 10px 5px;
+	background-color: rgba(0,0,0,0.3);
+	float: right;
+}
+#home_aside-btn i{
+	font-size: 0.87rem;
+	color: rgba(255,255,255,0.8);
+	line-height: 30px;
 }
 header #header_container{
 	height: 100%;

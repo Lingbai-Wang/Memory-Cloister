@@ -1,9 +1,10 @@
 $(document).ready(function(){
 
-	$("#header_aside-btn").click(function(){
+	$("#home_aside-btn").click(function(){
 		if ($("#home").css("width")=="200px") {
 			$("#home").css("width","50px");
-			$("#home").find("span").css("display","none");
+			$("#home_logo").css("display","none");
+			$("#home_aside-btn").css("float","none");
 			$("#header_container").css("margin-left","50px");
 			$("aside").css("width","50px");
 			$("#aside_container").css("width","50px");
@@ -35,7 +36,8 @@ $(document).ready(function(){
 			$("footer").css("margin-left","50px");
 		}else{			
 			$("#home").css("width","");
-			$("#home").find("span").css("display","");
+			$("#home_logo").css("display","");
+			$("#home_aside-btn").css("float","");
 			$("#header_container").css("margin-left","");
 			$("aside").css("width","");
 			$("#aside_container").css("width","");
