@@ -36,6 +36,7 @@ function nav2(){
 				$(">span>i:eq(1)",aThis).css("display","inline-block");
 				aThis.attr("on-off","on");
 				aThis.next().clone().appendTo($("aside"));
+				aHover2();
 				var h=document.documentElement.clientHeight||document.body.clientHeight;
 				var headerHeight=$("header").height();
 				if($(">i:eq(0)","#panel_btn-header").css("display")=="inline-block" 
@@ -92,6 +93,7 @@ function nav3(){
 			aThis.find("span i:eq(0)").css("display","none");
 			aThis.find("span i:eq(1)").css("display","inline-block");
 			aThis.next().clone().appendTo($("aside"));
+			aHover2();
 			var h=document.documentElement.clientHeight||document.body.clientHeight;
 			var indexHeight=0;
 			$(index).children().each(function(){
@@ -357,3 +359,27 @@ function nav4(){
 	/*左侧导航-树形-点击-零级菜单控制一级菜单（滚动）-结束*/
 }
 /*左侧导航-树形-点击-结束*/
+
+function aHover1(){
+	$("#aside_nav ul li a").hover(function(){
+		$(this).css("background-color","#7b8ec8");
+		$(this).css("color","#FFF");
+		$(">span>i",this).css("color","#FFF");
+	},function(){
+		$(this).css("background-color","");
+		$(this).css("color","");
+		$(">span>i",this).css("color","");
+	});
+}
+
+function aHover2(){
+	$("aside>.aside_nav-index1>li>a,aside>.aside_nav-index2>li>a").hover(function(){
+		$(this).css("background-color","#7b8ec8");
+		$(this).css("color","#FFF");
+		$(">span>i",this).css("color","#FFF");
+	},function(){
+		$(this).css("background-color","");
+		$(this).css("color","");
+		$(">span>i",this).css("color","");
+	});
+}

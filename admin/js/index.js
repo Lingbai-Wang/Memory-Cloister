@@ -302,6 +302,7 @@ $(document).ready(function(){
 				});
 				$("#aside_nav ul li a span").css("display","none");
 			}
+			aHover1();
 			switch(temp2){
 				case 3:
 					$("aside").on("nav1",nav1());
