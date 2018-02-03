@@ -19,19 +19,29 @@ $(document).ready(function(){
 			$("#aside_wrap>.aside_line").css("display","none");
 			$("#aside_search").css("display","none");
 			$("#aside_nav>ul>.aside_nav-title").css("display","none");
-			$("#aside_nav>ul>li").css("height","50px");
-			$("#aside_nav>ul>li>a").css({
-				"padding":"0",
-				"height":"100%",
-			});
-			$("#aside_nav>ul>li>a>i").css({
-				"width":"100%",
-				"height":"100%",
-				"font-size":"1rem",
-				"text-align":"center",
-				"line-height":"50px",
-			});
-			$("#aside_nav>ul>li>a>span").css("display","none");
+			if($(">i:eq(0)","#panel_btn-nav1").css("display")=="none"){
+				$("#aside_nav ul li a").css({
+					"padding":"0",
+				});
+				$("#aside_nav ul li a>i").css({
+					"width":"100%",
+					"font-size":"1rem",
+					"text-align":"center",
+					"line-height":"50px",
+				});
+				$("#aside_nav ul li a span").css("display","none");
+			}else{
+				$("#aside_nav>ul>li>a").css({
+					"padding":"0",
+				});
+				$("#aside_nav>ul>li>a>i").css({
+					"width":"100%",
+					"font-size":"1rem",
+					"text-align":"center",
+					"line-height":"50px",
+				});
+				$("#aside_nav>ul>li>a>span").css("display","none");
+			}
 			$("#content").css("margin-left","50px");
 			$("footer").css("margin-left","50px");
 		}else{			
@@ -54,19 +64,29 @@ $(document).ready(function(){
 			}
 			$("#aside_search").css("display","");
 			$("#aside_nav>ul>.aside_nav-title").css("display","");
-			$("#aside_nav>ul>li").css("height","");
-			$("#aside_nav>ul>li>a").css({
-				"padding":"",
-				"height":"",
-			});
-			$("#aside_nav>ul>li>a>i").css({
-				"width":"",
-				"height":"",
-				"font-size":"",
-				"text-align":"",
-				"line-height":"",
-			});
-			$("#aside_nav>ul>li>a>span").css("display","");
+			if($(">i:eq(0)","#panel_btn-nav1").css("display")=="none"){
+				$("#aside_nav ul li a").css({
+					"padding":"",
+				});
+				$("#aside_nav ul li a>i").css({
+					"width":"",
+					"font-size":"",
+					"text-align":"",
+					"line-height":"",
+				});
+				$("#aside_nav ul li a span").css("display","");
+			}else{
+				$("#aside_nav>ul>li>a").css({
+					"padding":"",
+				});
+				$("#aside_nav>ul>li>a>i").css({
+					"width":"",
+					"font-size":"",
+					"text-align":"",
+					"line-height":"",
+				});
+				$("#aside_nav>ul>li>a>span").css("display","");
+			}
 			$("#content").css("margin-left","");
 			$("footer").css("margin-left","");
 		}
@@ -204,6 +224,30 @@ $(document).ready(function(){
 
 	$("#panel_btn-nav1,#panel_btn-nav2,#panel_btn-nav3").click(function(){
 		if($(">i:eq(0)",this).css("display")=="inline-block"){
+			if($(">i:eq(0)","#panel_btn-nav1").css("display")=="none" 
+				&& $("#home").css("width")=="50px"){
+				$("#aside_nav ul li a").css({
+					"padding":"",
+				});
+				$("#aside_nav ul li a>i").css({
+					"width":"",
+					"font-size":"",
+					"text-align":"",
+					"line-height":"",
+				});
+				$("#aside_nav ul li a span").css("display","");
+
+				$("#aside_nav>ul>li>a").css({
+					"padding":"0",
+				});
+				$("#aside_nav>ul>li>a>i").css({
+					"width":"100%",
+					"font-size":"1rem",
+					"text-align":"center",
+					"line-height":"50px",
+				});
+				$("#aside_nav>ul>li>a>span").css("display","none");
+			}
 			$(">i:eq(0)",this).css("display","none");
 			$(">i:eq(1)",this).css("display","inline-block");
 			var temp1=$(this);
@@ -234,6 +278,30 @@ $(document).ready(function(){
 			$("#aside_nav ul li a span i").css({
 				"display":"",
 			});
+			if($(">i:eq(0)","#panel_btn-nav1").css("display")=="none" 
+				&& $("#home").css("width")=="50px"){
+				$("#aside_nav ul li a").css({
+					"padding":"",
+				});
+				$("#aside_nav ul li a>i").css({
+					"width":"",
+					"font-size":"",
+					"text-align":"",
+					"line-height":"",
+				});
+				$("#aside_nav ul li a span").css("display","");
+
+				$("#aside_nav ul li a").css({
+					"padding":"0",
+				});
+				$("#aside_nav ul li a>i").css({
+					"width":"100%",
+					"font-size":"1rem",
+					"text-align":"center",
+					"line-height":"50px",
+				});
+				$("#aside_nav ul li a span").css("display","none");
+			}
 			switch(temp2){
 				case 3:
 					$("aside").on("nav1",nav1());
