@@ -1,21 +1,27 @@
 /*左侧导航-切换-点击-开始*/
 function nav1(){
+	$("#aside_nav ul li a").attr("on-off","off");
 	$("#aside_nav ul li a").click(function(){
 		var temp=$(this);
 		$("li a",$(this).parents(":eq(1)")).each(function(){
 			if($(this).is(temp)==false){
 				$(">span>i:eq(0)",this).css("display","");
 				$(">span>i:eq(1)",this).css("display","");
+				$(this).attr("on-off","off");
 				$(this).next().hide();
 			}
 		});
 		$(this).next().toggle();
-		if($(">span>i:eq(0)",this).css("display")=="inline-block"){
-			$(">span>i:eq(0)",this).css("display","none");
-			$(">span>i:eq(1)",this).css("display","inline-block");	
-		}else{
-			$(">span>i:eq(0)",this).css("display","");
-			$(">span>i:eq(1)",this).css("display","");	
+		if($(this).next().length>0){
+			if($(this).attr("on-off")=="off"){
+				$(">span>i:eq(0)",this).css("display","none");
+				$(">span>i:eq(1)",this).css("display","inline-block");
+				$(this).attr("on-off","on");
+			}else{
+				$(">span>i:eq(0)",this).css("display","");
+				$(">span>i:eq(1)",this).css("display","");
+				$(this).attr("on-off","off");
+			}
 		}
 	});
 }
