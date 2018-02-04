@@ -92,6 +92,7 @@ function nav3(){
 		if(aThis.next().length>0){
 			aThis.find("span i:eq(0)").css("display","none");
 			aThis.find("span i:eq(1)").css("display","inline-block");
+			aThis.attr("on-off","on");
 			aThis.next().clone().appendTo($("aside"));
 			aHover2();
 			var h=document.documentElement.clientHeight||document.body.clientHeight;
@@ -122,6 +123,7 @@ function nav3(){
 	/*core-结束*/
 
 	/*左侧导航-树形-移入移出-零级菜单控制一级菜单-开始*/
+	$("#aside_nav ul li a").attr("on-off","off");
 	$("#aside_nav .aside_nav-index0 li a").hover(function(){
 
 		core($(this),"aside>.aside_nav-index1",$("aside").offset().left+$("aside").width()+0,180);
@@ -130,11 +132,13 @@ function nav3(){
 		var thisTemp0=$(this);			
 		$(this).find("span i:eq(0)").css("display","inline-block");
 		$(this).find("span i:eq(1)").css("display","none");
+		$(this).attr("on-off","off");
 		$("aside>.aside_nav-index1").css("display","none");
 
 		$("aside>.aside_nav-index1").hover(function(){
 			thisTemp0.find("span i:eq(0)").css("display","none");
 			thisTemp0.find("span i:eq(1)").css("display","inline-block");
+			thisTemp0.attr("on-off","on");
 			$("aside>.aside_nav-index1").css("display","block");
 
 			/*二级菜单第一次显示-开始*/
@@ -157,6 +161,7 @@ function nav3(){
 				var thisTemp1=$(this);			
 				$(this).find("span i:eq(0)").css("display","inline-block");
 				$(this).find("span i:eq(1)").css("display","none");
+				$(this).attr("on-off","off");
 				$("aside>.aside_nav-index2").css("display","none");
 
 				$("aside>.aside_nav-index2").hover(function(){
@@ -164,6 +169,8 @@ function nav3(){
 					thisTemp0.find("span i:eq(1)").css("display","inline-block");
 					thisTemp1.find("span i:eq(0)").css("display","none");
 					thisTemp1.find("span i:eq(1)").css("display","inline-block");
+					thisTemp0.attr("on-off","on");
+					thisTemp1.attr("on-off","on");
 					$("aside>.aside_nav-index1").css("display","block");
 					$("aside>.aside_nav-index2").css("display","block");
 
@@ -180,6 +187,8 @@ function nav3(){
 					thisTemp0.find("span i:eq(1)").css("display","none");
 					thisTemp1.find("span i:eq(0)").css("display","inline-block");
 					thisTemp1.find("span i:eq(1)").css("display","none");
+					thisTemp0.attr("on-off","off");
+					thisTemp1.attr("on-off","off");
 					$("aside>.aside_nav-index1").css("display","none");
 					$("aside>.aside_nav-index2").css("display","none");
 				});
@@ -190,6 +199,7 @@ function nav3(){
 		},function(){
 			thisTemp0.find("span i:eq(0)").css("display","inline-block");
 			thisTemp0.find("span i:eq(1)").css("display","none");
+			thisTemp0.attr("on-off","off");
 			$("aside>.aside_nav-index1").css("display","none");
 		});
 		
