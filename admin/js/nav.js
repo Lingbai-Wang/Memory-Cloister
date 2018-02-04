@@ -47,7 +47,7 @@ function nav2(){
 				aThis.attr("on-off","on");
 				aColor1(aThis);
 				aThis.next().clone().appendTo($("aside"));
-				aHover2();
+				aHover($("aside>.aside_nav-index1>li>a,aside>.aside_nav-index2>li>a"));
 				var h=document.documentElement.clientHeight||document.body.clientHeight;
 				var headerHeight=$("header").height();
 				if($(">i:eq(0)","#panel_btn-header").css("display")=="inline-block" 
@@ -108,7 +108,7 @@ function nav3(){
 			aThis.attr("on-off","on");
 			aColor1(aThis);
 			aThis.next().clone().appendTo($("aside"));
-			aHover2();
+			aHover($("aside>.aside_nav-index1>li>a,aside>.aside_nav-index2>li>a"));
 			var h=document.documentElement.clientHeight||document.body.clientHeight;
 			var indexHeight=0;
 			$(index).children().each(function(){
@@ -392,40 +392,29 @@ function nav4(){
 }
 /*左侧导航-树形-点击-结束*/
 
-function aHover1(){
-	$("#aside_nav ul li a").hover(function(){
-		if($(this).attr("on-off")=="off"){
-			$(this).css("background-color","#7b8ec8");
+function aHover(e){
+	e.hover(function(){
+		// if($(this).attr("on-off")=="off"){
+			$(this).css("background-color","#2F3949");
 			$(this).css("color","#FFF");
 			$(">span>i",this).css("color","#FFF");
-		}
+		// }
 	},function(){
 		if($(this).attr("on-off")=="off"){
 			$(this).css("background-color","");
 			$(this).css("color","");
 			$(">span>i",this).css("color","");
 		}
-	});
-}
-
-function aHover2(){
-	$("aside>.aside_nav-index1>li>a,aside>.aside_nav-index2>li>a").hover(function(){
-		if($(this).attr("on-off")=="off"){
-			$(this).css("background-color","#7b8ec8");
+		else{
+			$(this).css("background-color",$(this).next().css("background-color"));
 			$(this).css("color","#FFF");
 			$(">span>i",this).css("color","#FFF");
-		}
-	},function(){
-		if($(this).attr("on-off")=="off"){
-			$(this).css("background-color","");
-			$(this).css("color","");
-			$(">span>i",this).css("color","");
 		}
 	});
 }
 
 function aColor1(e){
-	e.css("background-color","#7b8ec8");
+	e.css("background-color",e.next().css("background-color"));
 	e.css("color","#FFF");
 	$(">span>i",e).css("color","#FFF");
 }
