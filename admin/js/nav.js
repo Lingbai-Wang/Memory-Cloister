@@ -8,6 +8,7 @@ function nav1(){
 				$(">span>i:eq(0)",this).css("display","");
 				$(">span>i:eq(1)",this).css("display","");
 				$(this).attr("on-off","off");
+				aColor2($(this));
 				$(this).next().hide();
 			}
 		});
@@ -17,10 +18,12 @@ function nav1(){
 				$(">span>i:eq(0)",this).css("display","none");
 				$(">span>i:eq(1)",this).css("display","inline-block");
 				$(this).attr("on-off","on");
+				aColor1($(this));
 			}else{
 				$(">span>i:eq(0)",this).css("display","");
 				$(">span>i:eq(1)",this).css("display","");
 				$(this).attr("on-off","off");
+				aColor2($(this));
 			}
 		}
 	});
@@ -37,10 +40,12 @@ function nav2(){
 					$(">span>i:eq(0)",this).css("display","inline-block");
 					$(">span>i:eq(1)",this).css("display","none");
 					$(this).attr("on-off","off");
+					aColor2($(this));
 				});
 				$(">span>i:eq(0)",aThis).css("display","none");
 				$(">span>i:eq(1)",aThis).css("display","inline-block");
 				aThis.attr("on-off","on");
+				aColor1(aThis);
 				aThis.next().clone().appendTo($("aside"));
 				aHover2();
 				var h=document.documentElement.clientHeight||document.body.clientHeight;
@@ -58,12 +63,14 @@ function nav2(){
 				$(">span>i:eq(0)",aThis).css("display","inline-block");
 				$(">span>i:eq(1)",aThis).css("display","none");
 				aThis.attr("on-off","off");
+				aColor2(aThis);
 			}
 		}else{
 			clean.each(function(){
 				$(">span>i:eq(0)",this).css("display","inline-block");
 				$(">span>i:eq(1)",this).css("display","none");
 				$(this).attr("on-off","off");
+				aColor2($(this));
 			});
 		}
 	}
@@ -99,6 +106,7 @@ function nav3(){
 			aThis.find("span i:eq(0)").css("display","none");
 			aThis.find("span i:eq(1)").css("display","inline-block");
 			aThis.attr("on-off","on");
+			aColor1(aThis);
 			aThis.next().clone().appendTo($("aside"));
 			aHover2();
 			var h=document.documentElement.clientHeight||document.body.clientHeight;
@@ -139,12 +147,14 @@ function nav3(){
 		$(this).find("span i:eq(0)").css("display","inline-block");
 		$(this).find("span i:eq(1)").css("display","none");
 		$(this).attr("on-off","off");
+		aColor2($(this));
 		$("aside>.aside_nav-index1").css("display","none");
 
 		$("aside>.aside_nav-index1").hover(function(){
 			thisTemp0.find("span i:eq(0)").css("display","none");
 			thisTemp0.find("span i:eq(1)").css("display","inline-block");
 			thisTemp0.attr("on-off","on");
+			aColor1(thisTemp0);
 			$("aside>.aside_nav-index1").css("display","block");
 
 			/*二级菜单第一次显示-开始*/
@@ -168,6 +178,7 @@ function nav3(){
 				$(this).find("span i:eq(0)").css("display","inline-block");
 				$(this).find("span i:eq(1)").css("display","none");
 				$(this).attr("on-off","off");
+				aColor2($(this));
 				$("aside>.aside_nav-index2").css("display","none");
 
 				$("aside>.aside_nav-index2").hover(function(){
@@ -177,6 +188,8 @@ function nav3(){
 					thisTemp1.find("span i:eq(1)").css("display","inline-block");
 					thisTemp0.attr("on-off","on");
 					thisTemp1.attr("on-off","on");
+					aColor1(thisTemp0);
+					aColor1(thisTemp1);
 					$("aside>.aside_nav-index1").css("display","block");
 					$("aside>.aside_nav-index2").css("display","block");
 
@@ -195,6 +208,8 @@ function nav3(){
 					thisTemp1.find("span i:eq(1)").css("display","none");
 					thisTemp0.attr("on-off","off");
 					thisTemp1.attr("on-off","off");
+					aColor2(thisTemp0);
+					aColor2(thisTemp1);
 					$("aside>.aside_nav-index1").css("display","none");
 					$("aside>.aside_nav-index2").css("display","none");
 				});
@@ -206,6 +221,7 @@ function nav3(){
 			thisTemp0.find("span i:eq(0)").css("display","inline-block");
 			thisTemp0.find("span i:eq(1)").css("display","none");
 			thisTemp0.attr("on-off","off");
+			aColor2(thisTemp0);
 			$("aside>.aside_nav-index1").css("display","none");
 		});
 		
@@ -378,24 +394,44 @@ function nav4(){
 
 function aHover1(){
 	$("#aside_nav ul li a").hover(function(){
-		$(this).css("background-color","#7b8ec8");
-		$(this).css("color","#FFF");
-		$(">span>i",this).css("color","#FFF");
+		if($(this).attr("on-off")=="off"){
+			$(this).css("background-color","#7b8ec8");
+			$(this).css("color","#FFF");
+			$(">span>i",this).css("color","#FFF");
+		}
 	},function(){
-		$(this).css("background-color","");
-		$(this).css("color","");
-		$(">span>i",this).css("color","");
+		if($(this).attr("on-off")=="off"){
+			$(this).css("background-color","");
+			$(this).css("color","");
+			$(">span>i",this).css("color","");
+		}
 	});
 }
 
 function aHover2(){
 	$("aside>.aside_nav-index1>li>a,aside>.aside_nav-index2>li>a").hover(function(){
-		$(this).css("background-color","#7b8ec8");
-		$(this).css("color","#FFF");
-		$(">span>i",this).css("color","#FFF");
+		if($(this).attr("on-off")=="off"){
+			$(this).css("background-color","#7b8ec8");
+			$(this).css("color","#FFF");
+			$(">span>i",this).css("color","#FFF");
+		}
 	},function(){
-		$(this).css("background-color","");
-		$(this).css("color","");
-		$(">span>i",this).css("color","");
+		if($(this).attr("on-off")=="off"){
+			$(this).css("background-color","");
+			$(this).css("color","");
+			$(">span>i",this).css("color","");
+		}
 	});
+}
+
+function aColor1(e){
+	e.css("background-color","#7b8ec8");
+	e.css("color","#FFF");
+	$(">span>i",e).css("color","#FFF");
+}
+
+function aColor2(e){
+	e.css("background-color","");
+	e.css("color","");
+	$(">span>i",e).css("color","");
 }

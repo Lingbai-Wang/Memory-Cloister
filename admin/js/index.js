@@ -269,6 +269,7 @@ $(document).ready(function(){
 			$("aside>.aside_nav-index1").remove();
 			$("aside>.aside_nav-index2").remove();
 			$("#aside_nav ul li a").removeAttr("on-off");
+			aColor2($("#aside_nav ul li a"));
 			$("#aside_nav ul").css({
 				"display":"",
 			});
