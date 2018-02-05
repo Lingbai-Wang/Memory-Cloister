@@ -77,25 +77,14 @@ header #header_container{
 	width: 88px;
 	margin-left: 15px;
 }
-#header_left #header_aside-btn{
-	display: inline-block;
-	width: 44px;
-	height: 100%;
-	float: left;
-}
+#header_left #header_temp-btn,
 #header_left #header_user-btn{
 	display: inline-block;
 	width: 44px;
 	height: 100%;
 	float: left;
 }
-#header_aside-btn i{
-	font-size: 0.87rem;
-	line-height: 50px;
-	text-align: center;
-	display: inline-block;
-	width: 100%;
-}
+#header_temp-btn i,
 #header_user-btn i{
 	font-size: 0.87rem;
 	line-height: 50px;
@@ -146,23 +135,23 @@ header #header_container{
 	height: 100%;
 	min-width: 250px;
 }
-#header_right #header_message,
 #header_right #header_notification,
-#header_right #header_set{
+#header_right #header_message,
+#header_right #header_setting{
 	width: 46px;
 	height: 100%;
 	float: left;
 }
-#header_message>a,
 #header_notification>a,
-#header_set>a{
+#header_message>a,
+#header_setting>a{
 	display: inline-block;
 	width: 100%;
 	height: 100%;
 }
-#header_message>a i,
 #header_notification>a i,
-#header_set>a i{
+#header_message>a i,
+#header_setting>a i{
 	font-size: 0.87rem;
 	line-height: 50px;
 	width: 100%;
