@@ -335,6 +335,10 @@ aside #aside_container{
 	padding: 9px 16px;
 	color: #b4b6bd;
 }
+#aside_nav ul li a:hover{
+	background-color: #2F3949 !important;
+	color: #FFF;
+}
 #aside_nav ul li a>i{
 	width: 30px;
 	font-size: 0.875rem;
@@ -417,6 +421,11 @@ aside>.aside_nav-index2 li a{
 	text-decoration: none;
 	padding: 9px 14px;
 	color: #b4b6bd;
+}
+aside>.aside_nav-index1 li a:hover,
+aside>.aside_nav-index2 li a:hover{
+	background-color: #2F3949 !important;
+	color: #FFF;
 }
 aside>.aside_nav-index1 li a>i,
 aside>.aside_nav-index2 li a>i{
