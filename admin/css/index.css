@@ -573,14 +573,14 @@ aside>.aside_nav-index2 .aside_nav-index3{
 	height: 32px;
 	margin: 40px 0 20px;
 }
-#content_posts #content_posts-pagination{
+.pagination{
 	list-style: none;
 	margin: 0;
 	padding: 0;
 	display: inline-block;
 	float: right;
 }
-#content_posts-pagination li{
+.pagination li{
 	float: left;
 	display: inline-block;
 	width: 30px;
@@ -589,7 +589,7 @@ aside>.aside_nav-index2 .aside_nav-index3{
 	background-color: #FFF;
 	margin-left: -1px;
 }
-#content_posts-pagination li a{
+.pagination li a{
 	text-decoration: none;
 	display: inline-block;
 	width: 100%;
@@ -598,32 +598,32 @@ aside>.aside_nav-index2 .aside_nav-index3{
 	line-height: 30px;
 	color: #009a61;
 }
-#content_posts-pagination li:hover{
+.pagination li:hover{
 	background-color: #EEE;
 }
-#content_posts-pagination .active{
+.pagination .active{
 	background-color: #009a61;
 }
-#content_posts-pagination .active:hover{
-	background-color: #009a61;
-}
-#content_posts-pagination .active a{
+.pagination .active a{
 	color: #FFF;
 }
-#content_posts-pagination .disabled{
+.pagination .active:hover{
+	background-color: #009a61;
+}
+.pagination .disabled{
 	background-color: #EEE;
 }
-#content_posts-pagination .disabled:hover{
-	background-color: #EEE;
-}
-#content_posts-pagination .disabled a{
+.pagination .disabled a{
 	cursor: default;
 }
-#content_posts-pagination li:first-child{
+.pagination .disabled:hover{
+	background-color: #EEE;
+}
+.pagination li:first-child{
 	border-bottom-left-radius: 3px;
 	border-top-left-radius: 3px;
 }
-#content_posts-pagination li:last-child{
+.pagination li:last-child{
 	border-bottom-right-radius: 3px;
 	border-top-right-radius: 3px;
 }
