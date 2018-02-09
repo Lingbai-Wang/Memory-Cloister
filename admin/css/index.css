@@ -687,6 +687,22 @@ aside>.aside_nav-index2 .aside_nav-index3{
 	color: #0DB8DF;
 	font-size: 0.8125rem;
 }
+#content_post-1 .content_post-bottom hr{
+	margin: 20px 0;
+	border: 0;
+	border-top: 1px #EEE solid;
+}
+#content_post-1 .content_post-bottom button{
+	padding: 6px 12px;
+	border: 0px;
+	outline: none;
+	background-color: #65C3DF;
+	color: #FFF;
+	border-radius: 4px;
+	font-size: 0.75rem;
+	cursor: pointer;
+	float: right;
+}
 #content #content_aside{
 	width: 240px;
 	float: right;
