@@ -1,16 +1,5 @@
 $(document).ready(function(){
 
-	function layout(){
-		if($("#content_container").height()>=1000){
-			$("#content").height($("#content_container").height());
-		}else{
-			$("#content_container").height(1000);
-			$("#content").height($("#content_container").height());
-		}
-	}
-
-	layout();
-
 	$("#home_aside-btn").click(function(){
 		if ($("#home").css("width")=="200px") {
 			$("#home").css("width","50px");

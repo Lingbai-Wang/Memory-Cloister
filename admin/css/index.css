@@ -447,11 +447,14 @@ aside>.aside_nav-index2 .aside_nav-index3{
 #content{
 	margin-left: 200px;
 	padding-top: 50px;
+	background-color: #FFF;
 }
 #content #content_container{
 	background-color: rgba(240,243,244,1);
 	width: calc(100% - 241px);
-	float: left;
+	display: inline-block;
+	min-height: 1000px;
+	border-right: 1px #dee5e7 solid;
 }
 #content_container #content_alert{
 	padding: 15px;
@@ -627,9 +630,7 @@ aside>.aside_nav-index2 .aside_nav-index3{
 #content #content_aside{
 	width: 240px;
 	float: right;
-	border-left: 1px #dee5e7 solid;
 	background-color: #FFF;
-	height: 100%;
 }
 #content_aside #content_aside-time{
 	height: 76px;
