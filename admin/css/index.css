@@ -503,7 +503,6 @@ aside>.aside_nav-index2 .aside_nav-index3{
 }
 #content_main #content_posts{
 	padding: 0 5px;
-	height: 100%;
 }
 #content_posts .content_post-1{
 	background-color: #FFF;
@@ -569,9 +568,10 @@ aside>.aside_nav-index2 .aside_nav-index3{
 	color: #0DB8DF;
 	font-size: 0.8125rem;
 }
-#content_posts nav{
+#content_main nav{
 	height: 32px;
 	margin: 40px 0 20px;
+	padding: 0 5px;
 }
 .pagination{
 	list-style: none;
