@@ -227,6 +227,13 @@ $(document).ready(function(){
 			$("#layout").css("width","100%");
 			$("header").css("width","100%");
 		}
+		if($(">i:eq(0)","#panel_btn-sidebar").css("display")=="inline-block"){
+			if($(">i:eq(0)","#panel_btn-header").css("display")=="inline-block"){
+				$("aside").css("height",$("#layout").height()-$("header").height());
+			}else{
+				$("aside").css("height",$("#layout").height());
+			}
+		}
 	});
 
 	$("#panel_btn-nav1,#panel_btn-nav2,#panel_btn-nav3").click(function(){
