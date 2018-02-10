@@ -90,6 +90,13 @@ $(document).ready(function(){
 			$("#content").css("margin-left","");
 			$("footer").css("margin-left","");
 		}
+		if($(">i:eq(0)","#panel_btn-sidebar").css("display")=="inline-block"){
+			if($(">i:eq(0)","#panel_btn-header").css("display")=="inline-block"){
+				$("aside").css("height",$("#layout").height()-$("header").height());
+			}else{
+				$("aside").css("height",$("#layout").height());
+			}
+		}
 	});
 
 	$("#header_user-btn").click(function(){
