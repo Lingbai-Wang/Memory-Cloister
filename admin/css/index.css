@@ -589,7 +589,7 @@ aside>.aside_nav-index2 .aside_nav-index3{
 	color: #0DB8DF;
 	font-size: 0.8125rem;
 }
-#content_main nav{
+#content_main #content_posts-pagination{
 	height: 32px;
 	margin: 40px 0 20px;
 }
@@ -726,6 +726,36 @@ aside>.aside_nav-index2 .aside_nav-index3{
 	font-size: 0.75rem;
 	cursor: pointer;
 	float: right;
+}
+#content_main #content_post-pager{
+	height: 30px;
+	margin: 40px 0 20px;
+}
+.pager{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.pager li{
+	display: inline;
+}
+.pager li a{
+	display: inline-block;
+	padding: 5px 14px;
+	background-color: #FFF;
+	border: 1px #ddd solid;
+	border-radius: 15px;
+	text-decoration: none;
+	color: #428bca;
+}
+.pager .previous a{
+	float: left;
+}
+.pager .next a{
+	float: right;
+}
+.pager .disabled a{
+	color: #777;
 }
 #content #content_aside{
 	width: 240px;
