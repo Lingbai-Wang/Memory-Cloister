@@ -498,6 +498,30 @@ aside>.aside_nav-index2 .aside_nav-index3{
 	color: #98a6ad;
 	letter-spacing: 1px;
 }
+#content_container #content_breadcrumb{
+	margin-top: -1px;
+}
+.breadcrumb{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	border-top: 1px #dee5e7 solid;
+	border-bottom: 1px #dee5e7 solid;
+	padding: 8px 20px;
+	background-color: #E6E6FA;
+}
+.breadcrumb li{
+	display: inline-block;
+}
+.breadcrumb>li+li:before{
+	padding: 0 5px;
+	color: #ccc;
+	content: "/\00a0";
+}
+.breadcrumb li a{
+	text-decoration: none;
+	color: #98a6ad;
+}
 #content_container #content_main{
 	padding: 20px 25px;
 }
