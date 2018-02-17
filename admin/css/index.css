@@ -257,11 +257,14 @@ aside #aside_container{
 	display: inline-block;
 	width: 100%;
 }
+#aside_userinfo a:nth-child(2) span:nth-child(1) strong{
+	padding-left: 6.86px;
+}
 #aside_userinfo a:nth-child(2) span:nth-child(2){
 	display: inline-block;
 	width: 100%;
 	color: #8b8e99;
-	font-size: 0.625rem;
+	font-size: 0.75rem;
 }
 .aside_line{
 	height: 1px;
@@ -270,38 +273,27 @@ aside #aside_container{
 }
 #aside_container #aside_search{
 	text-align: center;
-	padding-top: 14px;
-	padding-bottom: 14px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	position: relative;
+}
+#aside_search i{
+	font-size: 0.75rem;
+	line-height: 30px;
+	position: absolute;
+	left: 16px;
 }
 #aside_search #aside_search-content{
-	width: 144px;
-	height: 22px;
+	width: 200px;
+	height: 30px;
 	padding: 0px;
 	border: 0px;
 	outline: none;
-	background-color: rgba(240,243,244,1);
-	border-top-left-radius:500px;
-	border-bottom-left-radius:500px;
-	padding-left: 15px;
+	background-color: rgba(0,0,0,0.3);
+	padding-left: 46px;
 	padding-right: 2px;
 	font-size: 0.75rem;
-	color: #555;
-}
-#aside_search #aside_search-btn{
-	width: 26px;
-	height: 22px;
-	padding: 0px;
-	border: 0px;
-	outline: none;
-	background-color: rgba(240,243,244,1);
-	border-top-right-radius:500px;
-	border-bottom-right-radius:500px;
-}
-#aside_search-btn i{
-	font-size: 0.75rem;
-	color: #58666e;
-	line-height: 22px;
-	margin-right: 3px;
+	color: #FFF;
 }
 #aside_nav ul{
 	list-style: none;
@@ -838,6 +830,7 @@ aside>.aside_nav-index2 .aside_nav-index3{
 }
 .comment-list .comment-body h5{
 	margin: 0;
+	font-size: 0.75rem;
 	color: #6d757a;
 }
 .comment-list .comment-body p{
@@ -1042,7 +1035,7 @@ footer div span{
 	width: 42px;
 	height: 42px;
 	border: 1px #dee5e7 solid;
-	border-right-width: 0;
+	border-right-color: transparent;
 	border-radius: 2px;
 	box-shadow: none;
 	outline: none;
@@ -1050,6 +1043,9 @@ footer div span{
 	background-color: #f6f8f8;
 	font-size: 0.875rem;
 	color: #58666e;
+}
+#panel_btn i{
+	line-height: 40px;
 }
 #panel #panel_header{
 	height: 40px;
